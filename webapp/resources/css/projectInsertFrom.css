@@ -34,7 +34,6 @@ time, mark, audio, video {
 
 #button_wrapper
 {
- 
  display: flex;
  justify-content: flex-end;
  padding-right: 20px;
