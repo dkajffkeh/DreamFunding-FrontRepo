@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../resources/css/projectInsertFrom.css"></link>
     <title>Document</title>
 </head>
 <body>
     <div id="firstlayer_outer">
-
-        <div id="remoteController"></div>
-
+            <a name="totheTop"></a>
         <form action="" id="insertConroller">
-
+            
             <div id="button_wrapper">
                 <button class="btn btn-primary btn1"><i class="far fa-eye"></i>&nbsp;&nbsp;미리보기</button>
                 <button class="btn btn-primary btn2"><i class="far fa-save"></i>&nbsp;&nbsp;임시저장</button>
@@ -27,7 +28,31 @@
             <div id="secondlayer_outer">
 
                 <div class="bar upper handler1" id="first_bar">스토리</div>
+                <div id="story_wrapper">
+                    <div class="title_area"></div>
 
+                    <div class="article_wrapper">
+
+                    <div class="leftarticle_wrapper"></div>
+
+                    <div class="remote_fixedwrapper remote1">
+
+                    <div class="remoteController">
+                       <a href="#totheTop"><i class="fas fa-angle-up"></i></a>
+                       <div class="remote_icon">
+                           <i class="far fa-eye"></i>
+                           <i class="far fa-save"></i>
+                           <i class="fas fa-upload"></i>
+                           <i class="fas fa-handshake"></i>
+                      </div>
+                      <div class="remote_btn remobtn1"></div>
+                      <div class="remote_btn remobtn2"></div>
+                      <div class="remote_btn remobtn3"></div>
+                      <div class="remote_btn remobtn4">asd</div>
+                      </div>
+                    </div>  
+                    </div>
+                </div>
                 <div class="bar upper handler2" id="second_bar">리워드</div>
 
                 <div class="bar upper handler3" id="third_bar">안내사항</div>
@@ -37,6 +62,25 @@
             </div>
         </form>
     </div>
+
+    <script>
+
+        $("#first_bar").click(function(){
+            let $remote1 = $(".remote1")
+
+            $remote1.hide('fast');
+            $("#story_wrapper").slideToggle('slow',function(){
+                    if($remote1.css('display')=="none"){
+                        setInterval(function(){
+                            $remote1.css({"display":"block"});
+                        },1500);
+                    }
+            });
+
+        })
+
+
+    </script>
 </body>
 
 </html>
