@@ -91,35 +91,42 @@ a[href="#totheTop"]{
 
 #story_wrapper{
     border: 1px solid var(--lughtgray-color);
-    height: 2000px;
+    min-height: 1000px;
     margin-bottom: 5px;
     border-radius: 4px;
-    box-shadow: 2px 2px 2px 2px rgb(230, 230, 230); 
+    box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+    padding-bottom: 100px; 
     
 }
 .title_area {
     height:150px;
     width: 100%;
-    border:1px solid red;
-    
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.title-font
+{
+    font-size: 5rem;
+    font-style: italic;
+}
+.subtitle-font
+{
+    font-size: 1.6rem;
+    margin-left: 30px;
+    letter-spacing: 2px;
 }
 .article_wrapper{
     width:100%;
-    height:100%;
     display: flex;
 }
-
 .leftarticle_wrapper{
     width: 82%;
-    height:80%;   
-   
+    margin-top: 100px;
+    padding-left: 30px;
 }
-
 .remote_fixedwrapper{
     width:18%;
-    height:80%;
-      
-    
 }
 .remoteController{
     width:180px;
@@ -145,19 +152,15 @@ a[href="#totheTop"]{
     height:15%;
     margin-bottom: 10px;
 }
-
 .remoteController > .remote_icon i {
     flex-direction: column;
     font-size: 1.7rem;
     color: rgb(160, 160, 160);
     cursor: pointer;
-    
 }
-
 .remoteController > .remote_icon i:hover{
     color:var(--beige--color);
 }
-
 .remote_btn{
     width:90%;
     height:40px;
@@ -166,4 +169,39 @@ a[href="#totheTop"]{
     text-align: center;
     line-height: 40px;
     margin-bottom: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: rgb(80, 80, 80);
+}
+.remote_btn:hover{
+    background-color: var(--beige--color);
+    color:var(--wine--color);
+}
+
+.inputList_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.input_explanation{
+    margin-top: 10px;
+    color: gray;
+}
+.userInputarea{
+    padding-left: 80px;
+}
+.explanation_wrapper {
+    width:250px;
+    min-height:130px;
+    padding-bottom: 50px;
+    border-right: 3px solid lightgray;
+    
+}
+.form-control{
+    width:300px;
+    font-size: 1.3rem;
+    
+}
+option{
+    font-size: 1.5rem;
 }
