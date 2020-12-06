@@ -44,6 +44,17 @@ time, mark, audio, video {
     margin-left: 20px;
     font-size: 1rem;
     letter-spacing: 2px;
-    height: 32px;
-    
+    height: 36px;
+    line-height: 50%;
+    background-color:var(--wine--color);
+    color: var(--white-color);
+    box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+    border: none;
+}
+
+#secondlayer_outer
+{
+    width:100%;
+    border:1px solid red;
+    margin-top: 20px;
 }
