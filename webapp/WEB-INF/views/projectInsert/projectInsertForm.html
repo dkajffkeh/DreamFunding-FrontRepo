@@ -9,10 +9,59 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../resources/css/projectInsertFrom.css"></link>
+    <link rel="stylesheet" href="../../../resources/css/common.css"/>
+    <link rel="stylesheet" href="../../../resources/css/projectInsertForm/projectInsertFrom.css"></link>
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <div class="inner">
+          <div class="header__left">
+            <a class="logo" href="">
+              <img src="../../../resources/images/mainlogo.png" alt="" />
+            </a>
+            <ul class="header__nav">
+              <li><a href="#">펀딩하기</a></li>
+              <li><a href="#">마이페이지</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+            <button class="btn btn--main"><a href="#">프로젝트 만들기</a></button>
+          </div>
+  
+          <!-- 로그인 전 출력 영역 -->
+          <div class="header__right">
+            <div class="search__box">
+              <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+              <span class="material-icons"> search </span>
+            </div>
+            <a href="#" class="sign__group">로그인</a>
+            <a href="#" class="sign__group">회원가입</a>
+          </div>
+  
+          <!-- 로그인 시 출력 영역 -->
+          <!-- <div class="header__right">
+            <div class="search__box">
+              <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+              <span class="material-icons"> search </span>
+            </div>
+  
+            <i class="header__icon"
+              ><span class="material-icons"> notifications </span></i
+            >
+            <i class="header__icon"
+              ><span class="material-icons"> account_circle </span></i
+            >
+          </div> -->
+        </div>
+      </header>
+
+
     <div id="firstlayer_outer">
             <a name="totheTop"></a>
         <form action="" id="insertConroller">
@@ -136,7 +185,9 @@
                                     </div>
                                 </td>
                                 <td class="userInputarea">
-                                    <div id="calenderbox">
+                                    <div style="border:1px solid lightgray;
+                                                padding: 0px 20px 20px 20px;">
+                                    <div id="calenderbox" style="margin-top: 20px;">
                                     <input type="date" class="form-control date start">
                                     <div style="line-height: 40px;
                                                 font-size: 1.2rem;
@@ -157,28 +208,42 @@
                                                         style="font-size: 2rem;
                                                                color:orange">총 0일</div>
                                     <div align="center" id="dateError"></div>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">프로젝트 고유주소</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea" style="display: flex;
+                                                                 align-items: center;
+                                                                 font-size: 1.2rem;
+                                                                 margin-top: 60px;">http://localhost:8888/dreamfunding?proUrl=
+                                    <input type="text" style="width:200px" class="form-control">
+                                </td>
                             </tr>
                             <tr>
-                                <td class="explanation_wrapper">
+                                <td class="explanation_wrapper" style="border:1px solid red;">
                                     <div class="inputList_title">대표이미지</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        프로젝트 개성과 성격이 한눈에<br>
+                                        보여질 사진이 좋습니다!
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea" style="border:1px solid red; display: flex; justify-content: center; padding-top:0px ;" >
+                                    <input type="file" name="thumb_file" style="display: none;">
+                                    <img src="../../../resources/images/book10.jpg" alt="" width="200px" height="200px">
+                             </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">프로필 이미지</div>
                                     <div class="input_explanation"></div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea">
+                                    
+                                </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
@@ -247,7 +312,6 @@
             </div>
         </form>
     </div>
-
     <script>
         $("#first_bar").click(function(){
             let $remote1 = $(".remote1")

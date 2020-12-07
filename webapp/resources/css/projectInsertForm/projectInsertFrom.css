@@ -34,6 +34,9 @@ a{
 a[href="#totheTop"]{
     font-size: 1.5rem;
 }
+.header__nav > li{
+    list-style: none;
+}
 #firstlayer_outer
 {
   width:1200px;
@@ -218,3 +221,5 @@ option{
 #calenderbox{
     display: flex;
 }
+
+
