@@ -30,7 +30,6 @@ time, mark, audio, video {
 a{
     text-decoration: none;
     color:black;
-    
 }
 a[href="#totheTop"]{
     font-size: 1.5rem;
@@ -40,7 +39,6 @@ a[href="#totheTop"]{
   width:1200px;
   margin:auto;  
 }
-
 #button_wrapper
 {
  display: flex;
@@ -48,7 +46,6 @@ a[href="#totheTop"]{
  padding-right: 20px;
  padding-top: 50px;
 }
-
 #button_wrapper > .btn.btn-primary {
     
     margin-left: 20px;
@@ -63,13 +60,11 @@ a[href="#totheTop"]{
     box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
     border: none;
 }
-
 #secondlayer_outer
 {
     width:100%;
     margin-top: 20px;
 }
-
 .bar.upper
 {
     padding-left: 10px;
@@ -82,21 +77,17 @@ a[href="#totheTop"]{
     color: var(--white-color);
     border-radius: 4px;
     box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 .bar.upper:hover{
     background-color: var(--lightbeige--color);
 }
-
 #story_wrapper{
     border: 1px solid var(--lughtgray-color);
-    min-height: 1000px;
     margin-bottom: 5px;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
     padding-bottom: 100px; 
-    
 }
 .title_area {
     height:150px;
@@ -126,7 +117,7 @@ a[href="#totheTop"]{
     padding-left: 30px;
 }
 .remote_fixedwrapper{
-    width:18%;
+    width:18%;   
 }
 .remoteController{
     width:180px;
@@ -142,7 +133,6 @@ a[href="#totheTop"]{
     align-items: center;
 }
 .remoteController > .remote_icon{
-  
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -189,19 +179,42 @@ a[href="#totheTop"]{
 }
 .userInputarea{
     padding-left: 80px;
+    
 }
 .explanation_wrapper {
     width:250px;
     min-height:130px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     border-right: 3px solid lightgray;
-    
 }
-.form-control{
+#exampleFormControlSelect1{
     width:300px;
-    font-size: 1.3rem;
-    
+    font-size: 1.3rem; 
 }
 option{
     font-size: 1.5rem;
+}
+.form-control{
+    font-size: 1.2rem;
+}
+.form-control.pro_title{
+    width:500px;
+    font-size: 1.2rem;
+}
+.form-control.pro_title1{
+    font-size: 1.2rem;
+}
+.form-control.pri_amount{
+    width: 200px;
+    font-size: 1.2rem;
+}
+.lettercounter
+{
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: end;
+}
+
+#calenderbox{
+    display: flex;
 }
