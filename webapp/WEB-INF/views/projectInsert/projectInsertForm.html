@@ -224,16 +224,31 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="explanation_wrapper" style="border:1px solid red;">
+                                <td class="explanation_wrapper">
                                     <div class="inputList_title">대표이미지</div>
                                     <div class="input_explanation">
+                                        
                                         프로젝트 개성과 성격이 한눈에<br>
                                         보여질 사진이 좋습니다!
                                     </div>
                                 </td>
-                                <td class="userInputarea" style="border:1px solid red; display: flex; justify-content: center; padding-top:0px ;" >
-                                    <input type="file" name="thumb_file" style="display: none;">
-                                    <img src="../../../resources/images/book10.jpg" alt="" width="200px" height="200px">
+                                <td class="userInputarea">
+                                    <input type="file" name="thumbfile" id="thumbnail_uploader" style="display: none;">
+                                 <div class="userInputarea imagesection" >
+                                 <span style="font-size: 1.1rem;
+                                              margin-bottom: 15px;">아래 이미지를 클릭하여 사진을 업로드 해주세요.</span>
+                                 <img src="../../../resources/images/캡처.JPG" 
+                                      alt="" 
+                                      width="250px" 
+                                      height="220px" 
+                                      style="border:1px solid  lightgray;
+                                             cursor: pointer;"
+                                      id="thumbnail_img">
+                                 <span style="font-size: 1.1 rem;
+                                              margin-top: 10px;    
+                                              color:gray">용량 : 15MB 이하의 사진만 업로드가 가능합니다.</span>
+                                    <br>
+                                </div>
                              </td>
                             </tr>
                             <tr>
@@ -327,8 +342,7 @@
         })
         //카운터
         $(".form-control.pro_title").keydown(function(){$(".lettercounter.lc").text($(this).val().length+"/50");})
-        $(".form-control.pro_title1").keydown(function(){$(".lettercounter.lc1").text($(this).val().length+"/50");})
-        
+        $(".form-control.pro_title1").keydown(function(){$(".lettercounter.lc1").text($(this).val().length+"/50");})   
 
         $(".form-control.date.start").change(function(){
             $(".startdate").text("프로젝트 시작일 : "+$(this).val());
@@ -336,7 +350,6 @@
             if(!$(".form-control.date.end").val()==false){
                 calculateDday($(this).val() , $(".form-control.date.end").val());
             }
-
         })
         $(".form-control.date.end").change(function(){
             $(".enddate").text("프로젝트 종료일 : "+$(this).val());
@@ -363,6 +376,21 @@
             $("#dateError").text(`기간 설정이 잘못 되었습니다`);    
             }
         }
+
+        $("#thumbnail_img").click(function(){
+
+            $("#thumbnail_uploader").click();
+
+            });
+
+        $("#thumbnail_uploader").change(function(event){
+            let reader = new FileReader();
+            reader.onload = function(event){
+                let $img = $("#thumbnail_img"); 
+                $img.attr('src',event.target.result);
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        })            
     </script>
 
 </body>
