@@ -175,6 +175,18 @@
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
+                                    <div class="inputList_title">프로젝트 고유주소</div>
+                                    <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
+                                </td>
+                                <td class="userInputarea" style="display: flex;
+                                                                 align-items: center;
+                                                                 font-size: 1.2rem;
+                                                                 ">http://localhost:8888/dreamfunding?proUrl=
+                                    <input type="text" style="width:200px" class="form-control" placeholder="dreamfunding">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="explanation_wrapper">
                                     <div class="inputList_title">진행 기간</div>
                                     <div class="input_explanation">
                                         마감일은 시작일 보다 이전 날짜를<br>
@@ -210,31 +222,18 @@
                                     <div align="center" id="dateError"></div>
                                 </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">프로젝트 고유주소</div>
-                                    <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
-                                </td>
-                                <td class="userInputarea" style="display: flex;
-                                                                 align-items: center;
-                                                                 font-size: 1.2rem;
-                                                                 margin-top: 60px;">http://localhost:8888/dreamfunding?proUrl=
-                                    <input type="text" style="width:200px" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
+                            </tr>            
+                            <tr">
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">대표이미지</div>
                                     <div class="input_explanation">
-                                        
                                         프로젝트 개성과 성격이 한눈에<br>
                                         보여질 사진이 좋습니다!
                                     </div>
                                 </td>
                                 <td class="userInputarea">
                                     <input type="file" name="thumbfile" id="thumbnail_uploader" style="display: none;">
-                                 <div class="userInputarea imagesection" >
+                                 <div class="userInputarea imagesection"  style="margin-top: 80px;" >
                                  <span style="font-size: 1.1rem;
                                               margin-bottom: 15px;">아래 이미지를 클릭하여 사진을 업로드 해주세요.</span>
                                  <img src="../../../resources/images/캡처.JPG" 
@@ -254,32 +253,96 @@
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">프로필 이미지</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        프로젝트에 보여질 나의 모습을<br>
+                                        담아주세요!
+                                    </div>
                                 </td>
                                 <td class="userInputarea">
-                                    
+                                    <input type="file" name="profile" id="profile_uploader" style="display: none;">
+                                 <div class="userInputarea imagesection"  style="margin-top: 20px;" >
+                                 <span style="font-size: 1.1rem;
+                                              margin-bottom: 15px;">아래 이미지를 클릭하여 사진을 업로드 해주세요.</span>
+                                 <img src="../../../resources/images/Capture.JPG" 
+                                      alt="" 
+                                      width="80px" 
+                                      height="80px" 
+                                      style="border:1px solid  lightgray;
+                                             cursor: pointer;
+                                             border-radius: 50%;"     
+                                      id="profile_img">
+                                 <span style="font-size: 1.1 rem;
+                                              margin-top: 10px;    
+                                              color:gray">용량 : 15MB 이하의 사진만 업로드가 가능합니다.</span>
+                                    <br>
+                                </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">창작자 이름</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        창작자 명을 넣어주세요!<br>
+                                        입력사항이 없을 시 회원 닉네임이<br>
+                                        창작자 명으로 등록됩니다.
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea"><input type="text" 
+                                                                 style="width:300px" 
+                                                                 class="form-control" 
+                                                                 maxlength="10"
+                                                                 placeholder="드림펀딩">
+                                </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">창작자 짧은 소개</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        이용자의 마음을 살수있는 창작자님의 <br>
+                                        짧은 소개를 남겨주세요!<br>
+                                        (50자 까지 작성이 가능합니다)
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea">
+                                    <input type="text" 
+                                    style="width:600px" 
+                                    class="form-control"
+                                    id="creater-intro" 
+                                    maxlength="49"
+                                    placeholder="소개는 50자 이내로 작성해 주세요!">
+                                    <div class="lettercounter lc2">0/50</div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">해시태그</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        프로젝트가 더 많은 사람에게 노출 되도록<br>
+                                        알맞는 해시태그를 달아주세요!<br>
+                                        여러개 입력할시 ,(컴마) 로 구분지어 주세요.<br>    
+                                        컴마를 제외한 특부문자는 입력하실 수<br> 
+                                        없습니다.
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea">
+                                    <span style="display:flex; align-items: center;">
+                                    <span style="font-size: 1.4rem; 
+                                                 margin-right:5px;
+                                                 color: brown;">#</span>
+                                    <input type="text" 
+                                    style="width:350px" 
+                                    class="form-control"
+                                    id="hasgtagInput"
+                                    placeholder="파리파게뜨,건강한빵,유기농">
+                                    <button type="button"
+                                            class="btn btn-outline hashtagBtn" 
+                                            style="height:40px"
+                                            id="tagInsertBtn">해시태그 입력</button>
+                                    </span>
+                                    <div id="hashtagDisplayArea">
+                                        
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
@@ -328,6 +391,7 @@
         </form>
     </div>
     <script>
+        //클릭했을때 스로라이드 해주는 자바스크립트
         $("#first_bar").click(function(){
             let $remote1 = $(".remote1")
 
@@ -340,9 +404,11 @@
                     }
             });
         })
-        //카운터
+        //input letter counters
         $(".form-control.pro_title").keydown(function(){$(".lettercounter.lc").text($(this).val().length+"/50");})
         $(".form-control.pro_title1").keydown(function(){$(".lettercounter.lc1").text($(this).val().length+"/50");})   
+        $("#creater-intro").keydown(function(){$(".lettercounter.lc2").text($(this).val().length+"/50");}) 
+
 
         $(".form-control.date.start").change(function(){
             $(".startdate").text("프로젝트 시작일 : "+$(this).val());
@@ -390,7 +456,38 @@
                 $img.attr('src',event.target.result);
             };
             reader.readAsDataURL(event.target.files[0]);
-        })            
+        })
+
+        $("#profile_img").click(function(){
+
+            $("#profile_uploader").click();
+
+        })
+
+        $("#profile_uploader").change(function(event){
+            let reader = new FileReader();
+            reader.onload = function(event){
+                let $img = $("#profile_img"); 
+                $img.attr('src',event.target.result);
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        })
+        $(function(){
+            
+            let hashChildNodes = $("#hashtagDisplayArea").children().length;
+
+            if(hashChildNodes==0){
+                $("#hashtagDisplayArea").css('display','none');
+            }
+            
+            $("#tagInsertBtn").click(function(){
+
+                let checker = /^[A-z|a-z|0-9|ㄱ-ㅎ|가-힣|]*$/;
+                console.log(checker.test($("#hasgtagInput").val()));
+
+            })
+
+        })
     </script>
 
 </body>
