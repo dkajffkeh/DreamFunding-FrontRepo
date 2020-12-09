@@ -1,6 +1,60 @@
 /* main-image */
 .main-image img { border-radius: 7px; }
-.main-image { margin-bottom: 40px; }
+.main-image { 
+    width: 300vw;
+    transition: transform 0.5s;
+    position: relative;
+}
+.inner-image{
+    width: 100vw;
+    float: left;
+    margin-bottom: 50px;
+    position: relative;
+}
+.btn1{
+    position: absolute;
+    bottom: 200px;
+    left: 10px;
+    background-image: url(../images/arrow-left.png);
+    height: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    border:none;
+}
+.btn2{
+    position: absolute;
+    bottom: 200px;
+    left: 1150px;
+    background-image: url(../images/arrow-right.png);
+    height: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    border:none;
+}
+/* qna button */
+.sticky {
+    position: sticky;
+    top: 90vh;
+    margin-left: 85vw;
+    height: 0;
+}
+.btnQna{
+    border: none;
+    background-color: #fff7ed;
+    color: rgb(127, 0, 0);
+    font-weight: 700;
+    font-size: large;
+    height: 3rem;
+    width: 130px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.spanQna{
+    vertical-align: top;
+}
 /* card list */
 .card-list {
 	display: grid;
@@ -60,7 +114,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-        "main-image main-image main-image main-image"
         "title-a title-a title-a title-a"
         "thumbnail-a thumbnail-a thumbnail-a thumbnail-a"
         "more-a more-a more-a more-a"
@@ -73,7 +126,7 @@
         "bottom bottom bottom bottom";
     gap: 1rem;
 }
-.main-image { grid-area: main-image; }
+
 .title-a { grid-area: title-a; }
 .thumbnail-a { grid-area: thumbnail-a; }
 .more-a {
