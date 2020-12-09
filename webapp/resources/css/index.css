@@ -18,11 +18,19 @@
     padding-bottom: 60%;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-color: lightgray;
     background-size: cover;
     border-radius: 5px;
 }
 .card-image img { display: none; }
+.like{
+    float: right;
+    height: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    border:none;
+}
 .card-desc { padding: 1rem; }
 .card-desc{ display: grid; grid-template-rows: 1fr 30%; }
 /* project-content */
