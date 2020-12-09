@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.1/standard-all/ckeditor.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../resources/css/common.css"/>
@@ -339,7 +340,7 @@
                                             style="height:40px"
                                             id="tagInsertBtn">해시태그 입력</button>
                                     </span>
-                                    <div id="hashtagDisplayArea">
+                                    <div id="hashtagDisplayArea" style="display: none;">
                                         
                                     </div>
                                 </td>
@@ -347,18 +348,34 @@
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">동영상 url</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        내 프로젝트 페인에 보여질<br>
+                                        동영상을 올려주세요!<br>
+                                        url 영상이 우선 보여지게 됩니다.
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea">
+                                    <input type="text" 
+                                    style="width:450px"
+                                    id="videourlInput" 
+                                    class="form-control"
+                                    placeholder="https://www.youtube.com/xVV8Da9d0ig">
+                                </td>
                             </tr>
                             <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">스토리</div>
-                                    <div class="input_explanation"></div>
+                                    <div class="input_explanation">
+                                        프로젝트를 소개할 수 있는 이야기를 <br>
+                                        사진과 함께 업로드 해주세요.
+                                    </div>
                                 </td>
-                                <td class="userInputarea"></td>
+                                <td class="userInputarea">
+                                    <textarea name="" id="editor.ck"></textarea>
+                                </td>
                             </tr>           
                         </table>
+                        
                     </div>
                 
 
@@ -386,8 +403,10 @@
                 <div class="bar upper handler3" id="third_bar">안내사항</div>
 
                 <div class="bar upper handler4" id="forth_bar">제작자/부가정보</div>
-
+                <input tpye="hidden" name="hashtag" id="hashtags" style="display:none">
             </div>
+            <!-- inputtype hidden -->
+            
         </form>
     </div>
     <script>
@@ -473,14 +492,9 @@
             reader.readAsDataURL(event.target.files[0]);
         })
         //해시태그 조건검사 자바스크립트
+        
         $(function(){
-            
-            let hashChildNodes = $("#hashtagDisplayArea").children().length;
 
-            if(hashChildNodes==0){
-                $("#hashtagDisplayArea").css('display','none');
-            }
-            
             $("#tagInsertBtn").click(function(){                  
                 let checker = /^[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|,|]*$/g;
 
@@ -490,40 +504,52 @@
 
                 } else { //해시태그 입력값이 format 에 맞음
                    //유저 입력값을 hashArr 로 받게됨.
-                   
-                   let hashArr = $("#hasgtagInput").val().split(",");
-                   let resultArr = new Array;
-                   if(hashArr[hashArr.length-1]==''){
-                       hashArr.pop();
-                   }
+                   if($("#hasgtagInput").val().trim().length==0){//입력값이 공백일 경우
+                            
+                            alert("입력된 값이 없습니다.");
+                            $("#hashtags").remove('value');
+                            $("#hashtagDisplayArea").css('display','none');
 
-                   for(let j = 0 ; j<hashArr.length; j++){
-                       if(hashArr[j]!=''){
-                       resultArr.push(hashArr[j]);
-                       }
-                   }
-
-                   if(resultArr.length<10){ //해시태그 입력값이 10보다 아래일때.
-                    
-                    let hashHTML = "";
-                    $("#hashtagDisplayArea").css('display','block');
-
-                    for(let i = 0 ; i<resultArr.length; i++){
-
-                        hashHTML +=`<div class=hashtag>#${resultArr[i]}</div>` 
+                   } else {//입력값이 공백이 아닐경우
+                    let hashArr = $("#hasgtagInput").val().split(",");
+                    let resultArr = new Array;
+                    if(hashArr[hashArr.length-1]==''){
+                        hashArr.pop();
                     }
-                     
-                    $("#hashtagDisplayArea").html(hashHTML);
+
+                    for(let j = 0 ; j<hashArr.length; j++){
+                        if(hashArr[j]!=''){
+                        resultArr.push(hashArr[j]);
+                        }
+                    }
+
+                    if(resultArr.length<10){ //해시태그 입력값이 10보다 아래일때.
                         
-                   }
+                        let hashHTML = "";
+                        let valueresult = "";
+                        $("#hashtagDisplayArea").css('display','block');
 
+                        for(let i = 0 ; i<resultArr.length; i++){
 
+                            hashHTML +=`<div class=hashtag>#${resultArr[i]}</div>` 
 
+                        }
+                        //해시테그 입력값을 태그에 뿌려줌.
+                        $("#hasgtagInput").val('');
+                        $("#hashtagDisplayArea").html(hashHTML);
+                        $("#hashtags").attr('value',resultArr.join("#"));
 
-
-
+                    } else {
+                        alert("태그 입력값이 10개를 초과했습니다.");
+                    }
+                    }   
                 }
             })
+
+            CKEDITOR.replace('editor.ck',{
+                filebrowserUploadUrl:"fileupload.bo"
+            });
+
         })
     </script>
 
