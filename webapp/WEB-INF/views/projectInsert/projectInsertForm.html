@@ -320,7 +320,7 @@
                                         프로젝트가 더 많은 사람에게 노출 되도록<br>
                                         알맞는 해시태그를 달아주세요!<br>
                                         여러개 입력할시 ,(컴마) 로 구분지어 주세요.<br>    
-                                        컴마를 제외한 특부문자는 입력하실 수<br> 
+                                        컴마를 제외한 특수문자는 입력하실 수<br> 
                                         없습니다.
                                     </div>
                                 </td>
@@ -472,6 +472,7 @@
             };
             reader.readAsDataURL(event.target.files[0]);
         })
+        //해시태그 조건검사 자바스크립트
         $(function(){
             
             let hashChildNodes = $("#hashtagDisplayArea").children().length;
@@ -480,13 +481,49 @@
                 $("#hashtagDisplayArea").css('display','none');
             }
             
-            $("#tagInsertBtn").click(function(){
+            $("#tagInsertBtn").click(function(){                  
+                let checker = /^[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|,|]*$/g;
 
-                let checker = /^[A-z|a-z|0-9|ㄱ-ㅎ|가-힣|]*$/;
-                console.log(checker.test($("#hasgtagInput").val()));
+                if(!checker.test($("#hasgtagInput").val())){
 
+                    alert("올바른 해시태그 입력값이 아닙니다.")
+
+                } else { //해시태그 입력값이 format 에 맞음
+                   //유저 입력값을 hashArr 로 받게됨.
+                   
+                   let hashArr = $("#hasgtagInput").val().split(",");
+                   let resultArr = new Array;
+                   if(hashArr[hashArr.length-1]==''){
+                       hashArr.pop();
+                   }
+
+                   for(let j = 0 ; j<hashArr.length; j++){
+                       if(hashArr[j]!=''){
+                       resultArr.push(hashArr[j]);
+                       }
+                   }
+
+                   if(resultArr.length<10){ //해시태그 입력값이 10보다 아래일때.
+                    
+                    let hashHTML = "";
+                    $("#hashtagDisplayArea").css('display','block');
+
+                    for(let i = 0 ; i<resultArr.length; i++){
+
+                        hashHTML +=`<div class=hashtag>#${resultArr[i]}</div>` 
+                    }
+                     
+                    $("#hashtagDisplayArea").html(hashHTML);
+                        
+                   }
+
+
+
+
+
+
+                }
             })
-
         })
     </script>
 

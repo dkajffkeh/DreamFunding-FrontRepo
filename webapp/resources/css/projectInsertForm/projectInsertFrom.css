@@ -217,17 +217,14 @@ option{
     padding-top: 5px;
     text-align: end;
 }
-
 #calenderbox{
     display: flex;
 }
-
 #image_wrapper{
     
     height:200px;
     display: block;
 }
-
 .userInputarea.imagesection{
     border:1px solid lightgray;
     display: flex;
@@ -259,6 +256,7 @@ option{
     color: var(--wine--color);
     font-size: 1.4rem;
     margin-bottom: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     padding: 3px 7px 3px 7px;
 }
