@@ -49,6 +49,7 @@ a[href="#totheTop"]{
  padding-right: 20px;
  padding-top: 50px;
 }
+
 #button_wrapper > .btn.btn-primary {
     
     margin-left: 20px;
@@ -90,7 +91,7 @@ a[href="#totheTop"]{
     margin-bottom: 5px;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
-    padding-bottom: 100px; 
+    padding-bottom: 50px; 
 }
 .title_area {
     height:150px;
@@ -120,7 +121,8 @@ a[href="#totheTop"]{
     padding-left: 30px;
 }
 .remote_fixedwrapper{
-    width:18%;   
+    width:18%;
+    float:right;   
 }
 .remoteController{
     width:180px;
@@ -179,10 +181,6 @@ a[href="#totheTop"]{
 .input_explanation{
     margin-top: 10px;
     color: gray;
-}
-.userInputarea{
-    
-    
 }
 .explanation_wrapper {
     width:330px;
@@ -261,3 +259,9 @@ option{
     padding: 3px 7px 3px 7px;
 }
 
+#reward_wrapper,#notice_wrapper,#subinfo_wrapper{
+    border: 1px solid var(--lughtgray-color);
+    margin-bottom: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
+}

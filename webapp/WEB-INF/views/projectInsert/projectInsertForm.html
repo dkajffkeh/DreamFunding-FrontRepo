@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../resources/css/common.css"/>
     <link rel="stylesheet" href="../../../resources/css/projectInsertForm/projectInsertFrom.css"></link>
-  <link
+    <link
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet"
-  />
+    />
   
     <title>Document</title>
 </head>
@@ -64,8 +64,9 @@
 
 
     <div id="firstlayer_outer">
-            <a name="totheTop"></a>
+            <a id="totheTop"></a>
         <form action="" id="insertConroller">
+           
             
             <div id="button_wrapper">
                 <button class="btn btn-primary btn1"><i class="far fa-eye"></i>&nbsp;&nbsp;미리보기</button>
@@ -76,7 +77,7 @@
 
             <div id="secondlayer_outer">
 
-                <div class="bar upper handler1" id="first_bar">스토리</div>
+                <div class="bar upper handler1" id="first_bar">스토리&nbsp;&nbsp;(미완료)</div>
                 <div id="story_wrapper">
                     <div class="title_area">
                         <div class="title-font">스토리</div>
@@ -224,7 +225,7 @@
                                 </div>
                                 </td>
                             </tr>            
-                            <tr">
+                            <tr>
                                 <td class="explanation_wrapper">
                                     <div class="inputList_title">대표이미지</div>
                                     <div class="input_explanation">
@@ -371,58 +372,120 @@
                                     </div>
                                 </td>
                                 <td class="userInputarea">
+                                    <div style="color: white; font-size: 0.1px; height: 0.1px; width: 0.1px;">　</div>
                                     <textarea name="" id="editor.ck"></textarea>
                                 </td>
-                            </tr>           
+                            </tr>   
+                                    
                         </table>
-                        
                     </div>
+                    
+                    </div>
+                </div>
                 
+                <div class="bar upper handler2" id="second_bar">리워드&nbsp;&nbsp;(미완료)</div>
 
-                    <div class="remote_fixedwrapper remote1">
+                <div id="reward_wrapper">
+                    <div class="title_area">
+                        <div class="title-font">리워드</div>
+                        <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
+                        <hr class="title_divider">
+                    </div>
+                    <div class="article_wrapper">
+                        <div class="leftarticle_wrapper"> 
+                    <table>
+                        <tr>
+                            <td class="explanation_wrapper">
+                            </td>
+                            <td class="userInputarea">
+                            </td>                    
+                        </tr>
+                    </table>
+                    </div>
+                    </div>
+                </div>
 
-                    <div class="remoteController">
-                       <a href="#totheTop"><i class="fas fa-angle-up"></i></a>
+                <div class="bar upper handler3" id="third_bar">안내사항&nbsp;&nbsp;(미완료)</div>
+               
+                <div id="notice_wrapper">
+                    <div class="title_area">
+                        <div class="title-font">안내사항</div>
+                        <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
+                        <hr class="title_divider">
+                    </div>
+                    <div class="article_wrapper">
+                        <div class="leftarticle_wrapper"> 
+                    <table>
+                        <tr>
+                            <td class="explanation_wrapper">
+                            </td>
+                            <td class="userInputarea">
+                            </td>                    
+                        </tr>
+                    </table>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="bar upper handler4" id="forth_bar">제작자/부가정보&nbsp;&nbsp;(미완료)</div>
+               
+                <div id="subinfo_wrapper">
+                    <div class="title_area">
+                        <div class="title-font">제작자/부가정보</div>
+                        <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
+                        <hr class="title_divider">
+                    </div>
+                    <div class="article_wrapper">
+                        <div class="leftarticle_wrapper"> 
+                    <table>
+                        <tr>
+                            <td class="explanation_wrapper">
+                            </td>
+                            <td class="userInputarea">
+                            </td>                    
+                        </tr>
+                    </table>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="remote_fixedwrapper remote1">
+
+                        <div class="remoteController">
+                       <a href="#totheTop" id="topBtn"><i class="fas fa-angle-up"></i></a>
                        <div class="remote_icon">
                            <i class="far fa-eye"></i>
                            <i class="far fa-save"></i>
                            <i class="fas fa-upload"></i>
                            <i class="fas fa-handshake"></i>
                       </div>
-                      <div class="remote_btn remobtn1">스토리</div>
+                      <div class="remote_btn remobtn1" id="firstbar_remote">스토리</div>
                       <div class="remote_btn remobtn2">리워드</div>
                       <div class="remote_btn remobtn3">안내사항</div>
                       <div class="remote_btn remobtn4">제작자/부가정보</div>
                       </div>
-                    </div>  
                     </div>
-                </div>
-                </div>
-                <div class="bar upper handler2" id="second_bar">리워드</div>
-                
-                <div class="bar upper handler3" id="third_bar">안내사항</div>
 
-                <div class="bar upper handler4" id="forth_bar">제작자/부가정보</div>
-                <input tpye="hidden" name="hashtag" id="hashtags" style="display:none">
+              </div>
             </div>
             <!-- inputtype hidden -->
-            
+            <div id="hiddenInputArea" style="display: none;">    
+            <input tpye="hidden" name="hashtags" id="hashtags">
+            <input tpye="hidden">
+        </div>
         </form>
     </div>
     <script>
         //클릭했을때 스로라이드 해주는 자바스크립트
-        $("#first_bar").click(function(){
-            let $remote1 = $(".remote1")
+        $("#first_bar").click(function(){scrolltoggleFirstbar()}); //스토리 바 눌렀을때 토글
+        $("#firstbar_remote").click(function(){scrolltoggleFirstbar();}) //리모트 스토리 바 눌렀을때 토글.
+        
+        function scrolltoggleFirstbar(){
+            $("#story_wrapper").slideToggle('slow');
+            window.scrollTo(0,0);
+            
+        };
 
-            $remote1.hide('fast');
-            $("#story_wrapper").slideToggle('slow',function(){
-                    if($remote1.css('display')=="none"){
-                        setInterval(function(){
-                            $remote1.css({"display":"block"});
-                        },1500);
-                    }
-            });
-        })
         //input letter counters
         $(".form-control.pro_title").keydown(function(){$(".lettercounter.lc").text($(this).val().length+"/50");})
         $(".form-control.pro_title1").keydown(function(){$(".lettercounter.lc1").text($(this).val().length+"/50");})   
@@ -492,65 +555,65 @@
             reader.readAsDataURL(event.target.files[0]);
         })
         //해시태그 조건검사 자바스크립트
-        
         $(function(){
 
-            $("#tagInsertBtn").click(function(){                  
-                let checker = /^[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|,|]*$/g;
+        $("#tagInsertBtn").click(function(){                  
+        let checker = /^[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|,|]*$/g;
 
-                if(!checker.test($("#hasgtagInput").val())){
+        if(!checker.test($("#hasgtagInput").val())){
 
-                    alert("올바른 해시태그 입력값이 아닙니다.")
+            alert("올바른 해시태그 입력값이 아닙니다.")
 
-                } else { //해시태그 입력값이 format 에 맞음
-                   //유저 입력값을 hashArr 로 받게됨.
-                   if($("#hasgtagInput").val().trim().length==0){//입력값이 공백일 경우
-                            
-                            alert("입력된 값이 없습니다.");
-                            $("#hashtags").remove('value');
-                            $("#hashtagDisplayArea").css('display','none');
+        } else { //해시태그 입력값이 format 에 맞음
+        //유저 입력값을 hashArr 로 받게됨.
+        if($("#hasgtagInput").val().trim().length==0){//입력값이 공백일 경우
+                    
+                    alert("입력된 값이 없습니다.");
+                    $("#hashtags").remove('value');
+                    $("#hashtagDisplayArea").css('display','none');
 
-                   } else {//입력값이 공백이 아닐경우
-                    let hashArr = $("#hasgtagInput").val().split(",");
-                    let resultArr = new Array;
-                    if(hashArr[hashArr.length-1]==''){
-                        hashArr.pop();
-                    }
+        } else {//입력값이 공백이 아닐경우
+            let hashArr = $("#hasgtagInput").val().split(",");
+            let resultArr = new Array;
+            if(hashArr[hashArr.length-1]==''){
+                hashArr.pop();
+            }
 
-                    for(let j = 0 ; j<hashArr.length; j++){
-                        if(hashArr[j]!=''){
-                        resultArr.push(hashArr[j]);
-                        }
-                    }
+            for(let j = 0 ; j<hashArr.length; j++){
+                if(hashArr[j]!=''){
+                resultArr.push(hashArr[j]);
+                };
+            }
 
-                    if(resultArr.length<10){ //해시태그 입력값이 10보다 아래일때.
-                        
-                        let hashHTML = "";
-                        let valueresult = "";
-                        $("#hashtagDisplayArea").css('display','block');
+            if(resultArr.length<10){ //해시태그 입력값이 10보다 아래일때.
+                
+                let hashHTML = "";
+                let valueresult = "";
+                $("#hashtagDisplayArea").css('display','block');
 
-                        for(let i = 0 ; i<resultArr.length; i++){
+                for(let i = 0 ; i<resultArr.length; i++){
 
-                            hashHTML +=`<div class=hashtag>#${resultArr[i]}</div>` 
+                    hashHTML +=`<div class=hashtag>#${resultArr[i]}</div>` 
 
-                        }
-                        //해시테그 입력값을 태그에 뿌려줌.
-                        $("#hasgtagInput").val('');
-                        $("#hashtagDisplayArea").html(hashHTML);
-                        $("#hashtags").attr('value',resultArr.join("#"));
+                };
+                //해시테그 입력값을 태그에 뿌려줌.
+                $("#hasgtagInput").val('');
+                $("#hashtagDisplayArea").html(hashHTML);
+                $("#hashtags").attr('value',resultArr.join("#"));
 
-                    } else {
-                        alert("태그 입력값이 10개를 초과했습니다.");
-                    }
-                    }   
-                }
-            })
+            } else {
+                alert("태그 입력값이 10개를 초과했습니다.");
+            }
+            }   
+        }
+    });
 
             CKEDITOR.replace('editor.ck',{
-                filebrowserUploadUrl:"fileupload.bo"
-            });
+            filebrowserUploadUrl:"fileupload.bo"
+            })
 
-        })
+});
+  
     </script>
 
 </body>
