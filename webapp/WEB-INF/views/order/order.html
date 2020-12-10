@@ -17,19 +17,20 @@
   margin:auto;  
 }
     #paymentMain{
-        width:100%;
+        width:90%;
         height:250px;
+        margin:auto;
     }
     #paymentMain > div{
         height:100%;
         float:left;
     }
     #paymentIns{
-        width:60%;
+        width:50%;
         height:100%;
     }
     #paymentInfo{
-        width:40%;
+        width:50%;
         height:100%;
     }
     #cardSel div{
@@ -54,13 +55,13 @@
                 <li>스페셜 책갈피</li>
             </ul>
             <br>
-            <h4 align="center"> 25,000원</h4>
+            <h4 align="center">가격 : 25,000원</h4>
         <hr>
             <h4> 추가후원금 </h4>
             후원금 : 
             <input type="text"> 원
             <br><br>
-            <h4 align="center"> 35,000원</h4>
+            <h4 align="center">총합 :  35,000원</h4>
         <br><br>
         <form action="">
             <h3> 배송지 선택  </h3>
@@ -143,29 +144,30 @@
                     </tr>
                     
                 </table>
+                <br>
             <input type="radio" name="paymentSel"> 
             <label for ="paymentSel"><h4>새로운 결제수단</h4></label>
 
             <div id="paymentMain">
                 <div id="paymentIns">
-                    <table border="1" style="width:90%">
+                    <table  style="width:90%">
                         <tr>
                             <td colspan="4"><b style="font-size:18px">카드번호</b></td>
                         </tr>
                         <tr>
-                            <td><input type="text" style="width:130px"></td>
-                            <td><input type="text" style="width:130px"></td>
-                            <td><input type="text" style="width:130px"></td>
-                            <td><input type="text" style="width:130px"></td>
+                            <td><input type="text" style="width:120px"></td>
+                            <td><input type="text" style="width:120px"></td>
+                            <td><input type="text" style="width:120px"></td>
+                            <td><input type="text" style="width:120px"></td>
                         </tr>
                         <tr>
                             <td colspan="2"><b style="font-size:18px">유효기간</b></td>
                             <td colspan="2"><b style="font-size:18px">카드 비밀번호</b></td>
                         </tr>
                         <tr>
-                            <td><input type="listbox"></td>
-                            <td><input type="text" placeholder="mm"></td>
-                            <td><input type="text" placeholder="앞 2자리"></td>
+                            <td><input type="listbox" style="width:120px"></td>
+                            <td><input type="text" placeholder="mm" style="width:130px"></td>
+                            <td><input type="text" placeholder="앞 2자리" style="width:130px"></td>
                             <td></td>
                         </tr>
                         <tr>
@@ -173,10 +175,9 @@
                                 <b style="font-size:18px">생년월일 (주민번호 앞 6자리)</b><br>
                                 무기명 법인카드는 사업자등록번호 10자리를 입력하세요                        
                             </td>
-
                         </tr>
                         <tr>
-                            <td colspan="4"><input type="text" style="width:600px"></td>
+                            <td colspan="4"><input type="text" style="width:520px"></td>
                         </tr>
                     </table>
                 </div>
