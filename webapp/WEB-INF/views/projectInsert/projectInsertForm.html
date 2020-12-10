@@ -66,8 +66,7 @@
     <div id="firstlayer_outer">
             <a id="totheTop"></a>
         <form action="" id="insertConroller">
-           
-            
+
             <div id="button_wrapper">
                 <button class="btn btn-primary btn1"><i class="far fa-eye"></i>&nbsp;&nbsp;미리보기</button>
                 <button class="btn btn-primary btn2"><i class="far fa-save"></i>&nbsp;&nbsp;임시저장</button>
@@ -78,7 +77,7 @@
             <div id="secondlayer_outer">
 
                 <div class="bar upper handler1" id="first_bar">스토리&nbsp;&nbsp;(미완료)</div>
-                <div id="story_wrapper">
+                <div id="story_wrapper" style="display: none;">
                     <div class="title_area">
                         <div class="title-font">스토리</div>
                         <div class="subtitle-font">주요 정보가 담길 멋진 스토리를 담아주세요!</div>
@@ -396,9 +395,69 @@
                     <table>
                         <tr>
                             <td class="explanation_wrapper">
+                                <div class="inputList_title">리워드 금액 입력</div>
+                                <div class="input_explanation">
+                                    리워드 상품에 맞는 금액일 입력해주세요<br>
+                                    알맞지 않는 금액 입력시 프로젝트 기각<br>
+                                    사유가 될 수 있습니다.
+                                </div>
                             </td>
                             <td class="userInputarea">
-                            </td>                    
+                                <input type="number" class="form-control" style="width: 350px;">                   
+                            </td>                  
+                        </tr>
+                        <tr>
+                            <td class="explanation_wrapper">
+                                <div class="inputList_title">리워드 제공 가능 수</div>
+                                <div class="input_explanation">
+                                    리워드 제공 수를 입력하여 주세요 <br>
+                                    인지도에 따라 제공가능 수를 알맞게<br>
+                                    지정 해주세요!
+                                </div>
+                            </td>
+                            <td class="userInputarea">   
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                      <input type="radio" name="options" value="Y" id="reward_condition1"> 제한 없음
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                      <input type="radio" name="options" value="N" id="reward_condition2"> 제한
+                                    </label>
+                                </div>
+                                <div id="rewardAmount">
+                                <input type="number" class="form-control" style="width:80px"><span>&nbsp;&nbsp;개</span>    
+                                </div>
+                            </td>                  
+                        </tr>
+                        <tr>
+                            <td class="explanation_wrapper">
+                                <div class="inputList_title">리워드 옵션</div>
+                                <div class="input_explanation">
+                                    제공가능 품목 스폰서에게 보내질<br>
+                                    상품목록을 작성해주세요!
+                                </div>
+                            </td>
+                            <td class="userInputarea">
+                                <div id="reward_product">
+                                    <input type="text" 
+                                           class="form-control"
+                                           id="reward-options" 
+                                           style="width:300px">
+                                    <button class="btn btn-outline reward_btn" type="button" id="rewardInputBtn">옵션등록</button>
+                                </div>
+                                <ul id="reward_list">
+                                    
+                                </ul>                   
+                            </td>                  
+                        </tr>
+                        <tr>
+                            <td class="explanation_wrapper">
+                                <div class="inputList_title"></div>
+                                <div class="input_explanation">
+                                </div>
+                            </td>
+                            <td class="userInputarea">                   
+                            </td>                  
                         </tr>
                     </table>
                     </div>
@@ -407,7 +466,7 @@
 
                 <div class="bar upper handler3" id="third_bar">안내사항&nbsp;&nbsp;(미완료)</div>
                
-                <div id="notice_wrapper">
+                <div id="notice_wrapper" style="display: none;">
                     <div class="title_area">
                         <div class="title-font">안내사항</div>
                         <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
@@ -429,7 +488,7 @@
 
                 <div class="bar upper handler4" id="forth_bar">제작자/부가정보&nbsp;&nbsp;(미완료)</div>
                
-                <div id="subinfo_wrapper">
+                <div id="subinfo_wrapper" style="display: none;">
                     <div class="title_area">
                         <div class="title-font">제작자/부가정보</div>
                         <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
@@ -449,9 +508,9 @@
                     </div>
                 </div>
 
-                <div class="remote_fixedwrapper remote1">
+                    <div class="remote_fixedwrapper remote1" style="z-index: 10;">
 
-                        <div class="remoteController">
+                        <div class="remoteController" >
                        <a href="#totheTop" id="topBtn"><i class="fas fa-angle-up"></i></a>
                        <div class="remote_icon">
                            <i class="far fa-eye"></i>
@@ -460,12 +519,11 @@
                            <i class="fas fa-handshake"></i>
                       </div>
                       <div class="remote_btn remobtn1" id="firstbar_remote">스토리</div>
-                      <div class="remote_btn remobtn2">리워드</div>
+                      <div class="remote_btn remobtn2" id="secondbar_remote">리워드</div>
                       <div class="remote_btn remobtn3">안내사항</div>
                       <div class="remote_btn remobtn4">제작자/부가정보</div>
                       </div>
-                    </div>
-
+                </div>
               </div>
             </div>
             <!-- inputtype hidden -->
@@ -478,13 +536,25 @@
     <script>
         //클릭했을때 스로라이드 해주는 자바스크립트
         $("#first_bar").click(function(){scrolltoggleFirstbar()}); //스토리 바 눌렀을때 토글
-        $("#firstbar_remote").click(function(){scrolltoggleFirstbar();}) //리모트 스토리 바 눌렀을때 토글.
+        $("#firstbar_remote").click(function(){scrolltoggleFirstbar();}); //리모트 스토리 바 눌렀을때 토글.
+        $("#second_bar").click(function(){scrolltoggleSecondbar();});
+        $("#secondbar_remote").click(function(){scrolltoggleSecondbar();});
         
         function scrolltoggleFirstbar(){
+
+            $("#reward_wrapper").css('display','none');
+
             $("#story_wrapper").slideToggle('slow');
             window.scrollTo(0,0);
-            
         };
+        function scrolltoggleSecondbar(){
+
+            $("#story_wrapper").css('display','none');
+
+            $("#reward_wrapper").slideToggle('slow');
+            window.scrollTo(0,0);
+
+        }
 
         //input letter counters
         $(".form-control.pro_title").keydown(function(){$(".lettercounter.lc").text($(this).val().length+"/50");})
@@ -599,7 +669,8 @@
                 //해시테그 입력값을 태그에 뿌려줌.
                 $("#hasgtagInput").val('');
                 $("#hashtagDisplayArea").html(hashHTML);
-                $("#hashtags").attr('value',resultArr.join("#"));
+                valueresult = '#'+resultArr.join("#");
+                $("#hashtags").attr('value',valueresult);
 
             } else {
                 alert("태그 입력값이 10개를 초과했습니다.");
@@ -608,12 +679,43 @@
         }
     });
 
+});
+
+            //리워드 제공 가능수 옵션 클릭했을때 수량을 입력받는 input 보여줄지 말지.
+            $("#reward_condition1").click(function(){
+                $("#rewardAmount").css('display','none');
+            })
+            $("#reward_condition2").click(function(){
+                $("#rewardAmount").css('display','flex');
+            })   
+                
+            //리워드 옵션 선택자  20201211 여기부터 진행 해야함.
+            $("#rewardInputBtn").click(function(){
+
+                let optionValues = $("#reward-options").val();
+                let createLi = document.createElement('li');
+                let createInput = document.createElement('input')
+                createInput.setAttribute('type','hidden')
+                createInput.setAttribute('name','tempName');
+                createLi.setAttribute('onclick','deleteList(this)');
+               
+
+                if(optionValues.trim().length!=0){ //뭔가가 입력 된 경우
+
+                    createLi.innerHTML=optionValues;
+                    $("#reward_list").append(createLi);
+
+                } else {
+                    alert("입력값이 없습니다.")
+                }
+            });
+            
+            
+            
             CKEDITOR.replace('editor.ck',{
             filebrowserUploadUrl:"fileupload.bo"
             })
 
-});
-  
     </script>
 
 </body>

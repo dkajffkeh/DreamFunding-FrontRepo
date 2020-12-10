@@ -34,6 +34,11 @@ a{
 a[href="#totheTop"]{
     font-size: 1.5rem;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .header__nav > li{
     list-style: none;
 }
@@ -131,7 +136,7 @@ a[href="#totheTop"]{
     flex-direction: column;
     display: flex;
     position: fixed;
-    top:400px;
+    top:600px;
     bottom: 400px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px var(--lightbeige--color);
@@ -223,6 +228,7 @@ option{
     height:200px;
     display: block;
 }
+
 .userInputarea.imagesection{
     border:1px solid lightgray;
     display: flex;
@@ -265,3 +271,37 @@ option{
     border-radius: 4px;
     box-shadow: 2px 2px 2px 2px rgb(230, 230, 230);
 }
+#rewardAmount{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#reward_product{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.reward_btn{
+    color:var(--wine--color);
+    border: 1px solid var(--wine--color);
+    margin-left: 5px;
+}
+
+#reward_list{
+    margin-left: 22px;
+    margin-top: 10px;
+}
+#reward_list > li {
+    color:gray;
+    font-size: 1.4rem;
+}
+
+#reward_list > li:hover{
+    cursor: pointer;
+    color:var(--wine--color);
+}
+
+
+
