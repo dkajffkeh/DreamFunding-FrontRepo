@@ -7,15 +7,15 @@
         
         function scrolltoggleFirstbar(){
 
+            
             $("#reward_wrapper").css('display','none');
-
             $("#story_wrapper").slideToggle('slow');
             window.scrollTo(0,0);
         };
         function scrolltoggleSecondbar(){
 
+            
             $("#story_wrapper").css('display','none');
-
             $("#reward_wrapper").slideToggle('slow');
             window.scrollTo(0,0);
 

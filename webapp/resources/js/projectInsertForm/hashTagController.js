@@ -1,5 +1,5 @@
 'use strict'
-$(function(){
+
 
     $("#tagInsertBtn").click(function(){                  
     let checker = /^[A-Z|a-z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|,|]*$/g;
@@ -53,4 +53,4 @@ $(function(){
     }
 });
 
-});
+

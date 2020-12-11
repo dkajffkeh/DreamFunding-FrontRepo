@@ -303,5 +303,8 @@ option{
     color:var(--wine--color);
 }
 
-
+.reward_save_btn{
+    border:1px solid var(--wine--color);
+    color: var(--wine--color);
+}
 
