@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.11.1/standard-all/ckeditor.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../resources/css/common.css"/>
-    <link rel="stylesheet" href="../../../resources/css/projectInsertForm/projectInsertFrom.css"></link>
-    <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-    />
-  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../resources/css/common.css" />
+    <link rel="stylesheet" href="../../../resources/css/projectInsertForm/projectInsertFrom.css">
+    </link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
     <title>Document</title>
 </head>
+
 <body>
 
     <header>
         <div class="inner">
-          <div class="header__left">
-            <a class="logo" href="">
-              <img src="../../../resources/images/mainlogo.png" alt="" />
-            </a>
-            <ul class="header__nav">
-              <li><a href="#">펀딩하기</a></li>
-              <li><a href="#">마이페이지</a></li>
-              <li><a href="#">고객센터</a></li>
-            </ul>
-            <button class="btn btn--main"><a href="#">프로젝트 만들기</a></button>
-          </div>
-  
-          <!-- 로그인 전 출력 영역 -->
-          <div class="header__right">
-            <div class="search__box">
-              <input type="text" class="search-bar" placeholder="프로젝트 검색" />
-              <span class="material-icons"> search </span>
+            <div class="header__left">
+                <a class="logo" href="">
+                    <img src="../../../resources/images/mainlogo.png" alt="" />
+                </a>
+                <ul class="header__nav">
+                    <li><a href="#">펀딩하기</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <button class="btn btn--main"><a href="#">프로젝트 만들기</a></button>
             </div>
-            <a href="#" class="sign__group">로그인</a>
-            <a href="#" class="sign__group">회원가입</a>
-          </div>
-  
-          <!-- 로그인 시 출력 영역 -->
-          <!-- <div class="header__right">
+
+            <!-- 로그인 전 출력 영역 -->
+            <div class="header__right">
+                <div class="search__box">
+                    <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+                    <span class="material-icons"> search </span>
+                </div>
+                <a href="#" class="sign__group">로그인</a>
+                <a href="#" class="sign__group">회원가입</a>
+            </div>
+
+            <!-- 로그인 시 출력 영역 -->
+            <!-- <div class="header__right">
             <div class="search__box">
               <input type="text" class="search-bar" placeholder="프로젝트 검색" />
               <span class="material-icons"> search </span>
@@ -60,18 +63,20 @@
             >
           </div> -->
         </div>
-      </header>
+    </header>
 
 
     <div id="firstlayer_outer">
-            <a id="totheTop"></a>
+        <a id="totheTop"></a>
         <form action="" id="insertConroller">
 
             <div id="button_wrapper">
                 <button class="btn btn-primary btn1" type="button"><i class="far fa-eye"></i>&nbsp;&nbsp;미리보기</button>
                 <button class="btn btn-primary btn2" type="button"><i class="far fa-save"></i>&nbsp;&nbsp;임시저장</button>
-                <button class="btn btn-primary btn3" type="button"><i class="fas fa-upload"></i>&nbsp;&nbsp;불러오기</button>
-                <button class="btn btn-primary btn4" type="button"><i class="fas fa-handshake"></i>&nbsp;&nbsp;승인요청하기</button>
+                <button class="btn btn-primary btn3" type="button"><i
+                        class="fas fa-upload"></i>&nbsp;&nbsp;불러오기</button>
+                <button class="btn btn-primary btn4" type="button"><i
+                        class="fas fa-handshake"></i>&nbsp;&nbsp;승인요청하기</button>
             </div>
 
             <div id="secondlayer_outer">
@@ -85,303 +90,275 @@
                     </div>
 
                     <div class="article_wrapper">
-                     <div class="leftarticle_wrapper">
-                        <table>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">*프로젝트 성공 조건</div>
-                                    <div class="input_explanation">
-                                        프로젝트 성공 조건을 <br> 선택해 주십시오. <br>      
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-secondary active">
-                                          <input type="radio" name="options" value="Y" id="pro_condition1"> 100% 이상
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                          <input type="radio" name="options" value="N" id="pro_condition2"> 조건 없음
-                                        </label>
-                                      </div>
-                                    
-                                </td>                    
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">카테고리</div>
-                                    <div class="input_explanation">
-                                        프로젝트 카테고리를
-                                        넣어주세요<br></div>
-                                </td>
-                                <td class="userInputarea">
-                                    <div class="form-group">
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option checked="true">유아 도서</option>
-                                      <option>2</option>
-                                      <option>3</option>
-                                      <option>4</option>
-                                      <option>5</option>
-                                    </select>
-                                  </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">프로젝트 제목</div>
-                                    <div class="input_explanation">
-                                        자신의 프로젝트를 대변하는<br>
-                                        멋진 제목을 작성해 주세요!
+                        <div class="leftarticle_wrapper">
+                            <table>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">*프로젝트 성공 조건</div>
+                                        <div class="input_explanation">
+                                            프로젝트 성공 조건을 <br> 선택해 주십시오. <br>
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
 
-                                    </div>
-                                </td>
-                                
-                                <td class="userInputarea">
-                                   
-                                    <input type="text" 
-                                           class="form-control pro_title" 
-                                           placeholder="50자 이내로 작성해 주세요"
-                                           maxlength="49">
-                                           <div class="lettercounter lc">0/50</div>
-                                                              
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">프로젝트 짧은 제목</div>
-                                    <div class="input_explanation">검색에 더 많이 노출될 수 있도록<br>
-                                                                   부제목을 넣어주세요!</div>
-                                </td>
-                                <td class="userInputarea">
-                                           <input type="text" 
-                                           class="form-control pro_title1" 
-                                           placeholder="50자 이내로 작성해 주세요"
-                                           maxlength="49">
-                                           <div class="lettercounter lc1">0/50</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">목표 금액</div>
-                                    <div class="input_explanation">
-                                       마감일 자정 기준 목표금액<br>
-                                       미달성시 프로젝트가 자동 <br> 취소됩니다.(최소금액 10만원)
-                                       </div>
-                                </td>
-                                <td class="userInputarea"><input type="number" 
-                                                                 name="" 
-                                                                 class="form-control pri_amount" 
-                                                                 placeholder="100,000"
-                                                                 ></td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">프로젝트 고유주소</div>
-                                    <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
-                                </td>
-                                <td class="userInputarea" style="display: flex;
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-secondary active">
+                                                <input type="radio" name="options" value="Y" id="pro_condition1"> 100%
+                                                이상
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options" value="N" id="pro_condition2"> 조건 없음
+                                            </label>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">카테고리</div>
+                                        <div class="input_explanation">
+                                            프로젝트 카테고리를
+                                            넣어주세요<br></div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div class="form-group">
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option checked="true">유아 도서</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">프로젝트 제목</div>
+                                        <div class="input_explanation">
+                                            자신의 프로젝트를 대변하는<br>
+                                            멋진 제목을 작성해 주세요!
+
+                                        </div>
+                                    </td>
+
+                                    <td class="userInputarea">
+
+                                        <input type="text" class="form-control pro_title" placeholder="50자 이내로 작성해 주세요"
+                                            maxlength="49">
+                                        <div class="lettercounter lc">0/50</div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">프로젝트 짧은 제목</div>
+                                        <div class="input_explanation">검색에 더 많이 노출될 수 있도록<br>
+                                            부제목을 넣어주세요!</div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="text" class="form-control pro_title1" placeholder="50자 이내로 작성해 주세요"
+                                            maxlength="49">
+                                        <div class="lettercounter lc1">0/50</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">목표 금액</div>
+                                        <div class="input_explanation">
+                                            마감일 자정 기준 목표금액<br>
+                                            미달성시 프로젝트가 자동 <br> 취소됩니다.(최소금액 10만원)
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea"><input type="number" name=""
+                                            class="form-control pri_amount" placeholder="100,000"></td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">프로젝트 고유주소</div>
+                                        <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
+                                    </td>
+                                    <td class="userInputarea" style="display: flex;
                                                                  align-items: center;
                                                                  font-size: 1.2rem;
                                                                  ">http://localhost:8888/dreamfunding?proUrl=
-                                    <input type="text" style="width:200px" class="form-control" placeholder="dreamfunding">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">진행 기간</div>
-                                    <div class="input_explanation">
-                                        마감일은 시작일 보다 이전 날짜를<br>
-                                        고를수 없으며 100일이상일 경우<br>
-                                        프로젝트 등록 반려 사유가 될 수 <br> 있습니다.
-                        
+                                        <input type="text" style="width:200px" class="form-control"
+                                            placeholder="dreamfunding">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">진행 기간</div>
+                                        <div class="input_explanation">
+                                            마감일은 시작일 보다 이전 날짜를<br>
+                                            고를수 없으며 100일이상일 경우<br>
+                                            프로젝트 등록 반려 사유가 될 수 <br> 있습니다.
 
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <div style="border:1px solid lightgray;
+
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div style="border:1px solid lightgray;
                                                 padding: 0px 20px 20px 20px;">
-                                    <div id="calenderbox" style="margin-top: 20px;">
-                                    <input type="date" class="form-control date start">
-                                    <div style="line-height: 40px;
+                                            <div id="calenderbox" style="margin-top: 20px;">
+                                                <input type="date" class="form-control date start">
+                                                <div style="line-height: 40px;
                                                 font-size: 1.2rem;
                                                 margin-right: 10px;
-                                                margin-left: 10px;">~</div>                                 
-                                    <input type="date" class="form-control date end">
-                                    </div>
-                                    <div class="datedisplay" style="display: flex;">
-                                        <div class="startdate" style="width:280px;
+                                                margin-left: 10px;">~</div>
+                                                <input type="date" class="form-control date end">
+                                            </div>
+                                            <div class="datedisplay" style="display: flex;">
+                                                <div class="startdate" style="width:280px;
                                                                       font-size: 1.2rem;"></div>
-                                        <div class="enddate" style="font-size: 1.2rem;"></div>
-                                    </div>
-                                    <div class="totaldate" align="center"
-                                                           style="font-size: 1.5rem;
+                                                <div class="enddate" style="font-size: 1.2rem;"></div>
+                                            </div>
+                                            <div class="totaldate" align="center" style="font-size: 1.5rem;
                                                            margin-top: 10px;">프로젝트 기간</div>
-                                    <hr>
-                                    <div align="center" id="dateResult"
-                                                        style="font-size: 2rem;
+                                            <hr>
+                                            <div align="center" id="dateResult" style="font-size: 2rem;
                                                                color:orange">총 0일</div>
-                                    <div align="center" id="dateError"></div>
-                                </div>
-                                </td>
-                            </tr>            
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">대표이미지</div>
-                                    <div class="input_explanation">
-                                        프로젝트 개성과 성격이 한눈에<br>
-                                        보여질 사진이 좋습니다!
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <input type="file" name="thumbfile" id="thumbnail_uploader" style="display: none;">
-                                 <div class="userInputarea imagesection"  style="margin-top: 80px;" >
-                                 <span style="font-size: 1.1rem;
+                                            <div align="center" id="dateError"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">대표이미지</div>
+                                        <div class="input_explanation">
+                                            프로젝트 개성과 성격이 한눈에<br>
+                                            보여질 사진이 좋습니다!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="file" name="thumbfile" id="thumbnail_uploader"
+                                            style="display: none;">
+                                        <div class="userInputarea imagesection" style="margin-top: 80px;">
+                                            <span style="font-size: 1.1rem;
                                               margin-bottom: 15px;">아래 이미지를 클릭하여 사진을 업로드 해주세요.</span>
-                                 <img src="../../../resources/images/캡처.JPG" 
-                                      alt="" 
-                                      width="250px" 
-                                      height="220px" 
-                                      style="border:1px solid  lightgray;
-                                             cursor: pointer;"
-                                      id="thumbnail_img">
-                                 <span style="font-size: 1.1 rem;
+                                            <img src="../../../resources/images/캡처.JPG" alt="" width="250px"
+                                                height="220px" style="border:1px solid  lightgray;
+                                             cursor: pointer;" id="thumbnail_img">
+                                            <span style="font-size: 1.1 rem;
                                               margin-top: 10px;    
                                               color:gray">용량 : 15MB 이하의 사진만 업로드가 가능합니다.</span>
-                                    <br>
-                                </div>
-                             </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">프로필 이미지</div>
-                                    <div class="input_explanation">
-                                        프로젝트에 보여질 나의 모습을<br>
-                                        담아주세요!
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <input type="file" name="profile" id="profile_uploader" style="display: none;">
-                                 <div class="userInputarea imagesection"  style="margin-top: 20px;" >
-                                 <span style="font-size: 1.1rem;
+                                            <br>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">프로필 이미지</div>
+                                        <div class="input_explanation">
+                                            프로젝트에 보여질 나의 모습을<br>
+                                            담아주세요!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="file" name="profile" id="profile_uploader" style="display: none;">
+                                        <div class="userInputarea imagesection" style="margin-top: 20px;">
+                                            <span style="font-size: 1.1rem;
                                               margin-bottom: 15px;">아래 이미지를 클릭하여 사진을 업로드 해주세요.</span>
-                                 <img src="../../../resources/images/Capture.JPG" 
-                                      alt="" 
-                                      width="80px" 
-                                      height="80px" 
-                                      style="border:1px solid  lightgray;
+                                            <img src="../../../resources/images/Capture.JPG" alt="" width="80px"
+                                                height="80px" style="border:1px solid  lightgray;
                                              cursor: pointer;
-                                             border-radius: 50%;"     
-                                      id="profile_img">
-                                 <span style="font-size: 1.1 rem;
+                                             border-radius: 50%;" id="profile_img">
+                                            <span style="font-size: 1.1 rem;
                                               margin-top: 10px;    
                                               color:gray">용량 : 15MB 이하의 사진만 업로드가 가능합니다.</span>
-                                    <br>
-                                </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">창작자 이름</div>
-                                    <div class="input_explanation">
-                                        창작자 명을 넣어주세요!<br>
-                                        입력사항이 없을 시 회원 닉네임이<br>
-                                        창작자 명으로 등록됩니다.
-                                    </div>
-                                </td>
-                                <td class="userInputarea"><input type="text" 
-                                                                 style="width:300px" 
-                                                                 class="form-control" 
-                                                                 maxlength="10"
-                                                                 placeholder="드림펀딩">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">창작자 짧은 소개</div>
-                                    <div class="input_explanation">
-                                        이용자의 마음을 살수있는 창작자님의 <br>
-                                        짧은 소개를 남겨주세요!<br>
-                                        (50자 까지 작성이 가능합니다)
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <input type="text" 
-                                    style="width:600px" 
-                                    class="form-control"
-                                    id="creater-intro" 
-                                    maxlength="49"
-                                    placeholder="소개는 50자 이내로 작성해 주세요!">
-                                    <div class="lettercounter lc2">0/50</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">해시태그</div>
-                                    <div class="input_explanation">
-                                        프로젝트가 더 많은 사람에게 노출 되도록<br>
-                                        알맞는 해시태그를 달아주세요!<br>
-                                        여러개 입력할시 ,(컴마) 로 구분지어 주세요.<br>    
-                                        컴마를 제외한 특수문자는 입력하실 수<br> 
-                                        없습니다.
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <span style="display:flex; align-items: center;">
-                                    <span style="font-size: 1.4rem; 
+                                            <br>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">창작자 이름</div>
+                                        <div class="input_explanation">
+                                            창작자 명을 넣어주세요!<br>
+                                            입력사항이 없을 시 회원 닉네임이<br>
+                                            창작자 명으로 등록됩니다.
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea"><input type="text" style="width:300px"
+                                            class="form-control" maxlength="10" placeholder="드림펀딩">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">창작자 짧은 소개</div>
+                                        <div class="input_explanation">
+                                            이용자의 마음을 살수있는 창작자님의 <br>
+                                            짧은 소개를 남겨주세요!<br>
+                                            (50자 까지 작성이 가능합니다)
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="text" style="width:600px" class="form-control" id="creater-intro"
+                                            maxlength="49" placeholder="소개는 50자 이내로 작성해 주세요!">
+                                        <div class="lettercounter lc2">0/50</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">해시태그</div>
+                                        <div class="input_explanation">
+                                            프로젝트가 더 많은 사람에게 노출 되도록<br>
+                                            알맞는 해시태그를 달아주세요!<br>
+                                            여러개 입력할시 ,(컴마) 로 구분지어 주세요.<br>
+                                            컴마를 제외한 특수문자는 입력하실 수<br>
+                                            없습니다.
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <span style="display:flex; align-items: center;">
+                                            <span style="font-size: 1.4rem; 
                                                  margin-right:5px;
                                                  color: brown;">#</span>
-                                    <input type="text" 
-                                    style="width:350px" 
-                                    class="form-control"
-                                    id="hasgtagInput"
-                                    placeholder="파리파게뜨,건강한빵,유기농">
-                                    <button type="button"
-                                            class="btn btn-outline hashtagBtn" 
-                                            style="height:40px"
-                                            id="tagInsertBtn">해시태그 입력</button>
-                                    </span>
-                                    <div id="hashtagDisplayArea" style="display: none;">
-                                        
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">동영상 url</div>
-                                    <div class="input_explanation">
-                                        내 프로젝트 페인에 보여질<br>
-                                        동영상을 올려주세요!<br>
-                                        url 영상이 우선 보여지게 됩니다.
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <input type="text" 
-                                    style="width:450px"
-                                    id="videourlInput" 
-                                    class="form-control"
-                                    placeholder="https://www.youtube.com/xVV8Da9d0ig">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="explanation_wrapper">
-                                    <div class="inputList_title">스토리</div>
-                                    <div class="input_explanation">
-                                        프로젝트를 소개할 수 있는 이야기를 <br>
-                                        사진과 함께 업로드 해주세요.
-                                    </div>
-                                </td>
-                                <td class="userInputarea">
-                                    <div style="color: white; font-size: 0.1px; height: 0.1px; width: 0.1px;">　</div>
-                                    <textarea name="" id="editor.ck"></textarea>
-                                </td>
-                            </tr>   
-                                    
-                        </table>
-                    </div>
-                    
+                                            <input type="text" style="width:350px" class="form-control"
+                                                id="hasgtagInput" placeholder="파리파게뜨,건강한빵,유기농">
+                                            <button type="button" class="btn btn-outline hashtagBtn" style="height:40px"
+                                                id="tagInsertBtn">해시태그 입력</button>
+                                        </span>
+                                        <div id="hashtagDisplayArea" style="display: none;">
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">동영상 url</div>
+                                        <div class="input_explanation">
+                                            내 프로젝트 페인에 보여질<br>
+                                            동영상을 올려주세요!<br>
+                                            url 영상이 우선 보여지게 됩니다.
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="text" style="width:450px" id="videourlInput" class="form-control"
+                                            placeholder="https://www.youtube.com/xVV8Da9d0ig">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">스토리</div>
+                                        <div class="input_explanation">
+                                            프로젝트를 소개할 수 있는 이야기를 <br>
+                                            사진과 함께 업로드 해주세요.
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div style="color: white; font-size: 0.1px; height: 0.1px; width: 0.1px;">　
+                                        </div>
+                                        <textarea name="" id="editor.ck"></textarea>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+
                     </div>
                 </div>
-                
+
                 <div class="bar upper handler2" id="second_bar">리워드&nbsp;&nbsp;(미완료)</div>
 
                 <div id="reward_wrapper">
@@ -391,114 +368,119 @@
                         <hr class="title_divider">
                     </div>
                     <div class="article_wrapper">
-                        <div class="leftarticle_wrapper"> 
-                    <table>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title">리워드 금액 입력</div>
-                                <div class="input_explanation">
-                                    리워드 상품에 맞는 금액일 입력해주세요<br>
-                                    알맞지 않는 금액 입력시 프로젝트 기각<br>
-                                    사유가 될 수 있습니다.
-                                </div>
-                            </td>
-                            <td class="userInputarea">
-                                <input type="number" class="form-control" style="width: 350px;">                   
-                            </td>                  
-                        </tr>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title">리워드 제공 가능 수</div>
-                                <div class="input_explanation">
-                                    리워드 제공 수를 입력하여 주세요 <br>
-                                    인지도에 따라 제공가능 수를 알맞게<br>
-                                    지정 해주세요!
-                                </div>
-                            </td>
-                            <td class="userInputarea">   
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="options" value="Y" id="reward_condition1"> 제한 없음
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="options" value="N" id="reward_condition2"> 제한
-                                    </label>
-                                </div>
-                                <div id="rewardAmount">
-                                <input type="number" class="form-control" style="width:80px"><span>&nbsp;&nbsp;개</span>    
-                                </div>
-                            </td>                  
-                        </tr>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title">리워드 옵션</div>
-                                <div class="input_explanation">
-                                    제공가능 품목 스폰서에게 보내질<br>
-                                    상품목록을 작성해주세요!
-                                </div>
-                            </td>
-                            <td class="userInputarea">
-                                <div id="reward_product">
-                                    <input type="text" 
-                                           class="form-control"
-                                           id="reward-options" 
-                                           style="width:300px">
-                                    <button class="btn btn-outline reward_btn" type="button" id="rewardInputBtn">옵션등록</button>
-                                </div>
-                                <ul id="reward_list">
-                                </ul>                   
-                            </td>                  
-                        </tr>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title">배송지 필요 여부</div>
-                                <div class="input_explanation">
-                                    리워드 상품이 존재할경우 스폰서에게<br>
-                                    배송지 등록이 필요한지 먼저 알려주세요!<br>
-                                </div>
-                            </td>
-                            <td class="userInputarea">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                      <input type="radio" name="addrCheck" value="Y" id="reward_condition1"> 배송지 필요
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                      <input type="radio" name="addrCheck" value="N" id="reward_condition2"> 배송지 필요없음
-                                    </label>
-                                </div>                   
-                            </td>                  
-                        </tr>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title">리워드 리스트</div>
-                                <div class="input_explanation">
-                                    작성한 리워드 리스트를 확인하세요!<br>
-                                    스폰서에게 보여지는 만큼 꼼꼼한 확인<br>
-                                    을 부탁드립니다!
-                                </div>
-                            </td>
-                            <td class="userInputarea">
-                                <div style="font-size: 0.1px; height: 0.1px; color:white"></div>
-                                <div class="rewardDisplayBox">저장된 리워드가 없습니다.</div>
-                            </td>                    
-                        </tr>
-                        <tr>
-                            <td class="explanation_wrapper">
-                                <div class="inputList_title"></div>
-                                <div class="input_explanation">
-                                </div>
-                            </td>
-                            <td class="userInputarea">
-                                <button class="btn btn-outline reward_save_btn">리워드 저장</button>
-                            </td>                    
-                        </tr>         
-                    </table>
-                    </div>
+                        <div class="leftarticle_wrapper">
+                            <table>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">* 리워드 금액 입력</div>
+                                        <div class="input_explanation">
+                                            리워드 상품에 맞는 금액일 입력해주세요<br>
+                                            알맞지 않는 금액 입력시 프로젝트 기각<br>
+                                            사유가 될 수 있습니다.
+                                        </div>
+                                        </td>
+                                        <td class="userInputarea">
+                                            <input type="number" class="form-control" style="width: 350px;" id="rewardPrice" required>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="explanation_wrapper">
+                                                <div class="inputList_title">* 리워드 제공 가능 수</div>
+                                        <div class="input_explanation">
+                                            리워드 제공 수를 입력하여 주세요 <br>
+                                            인지도에 따라 제공가능 수를 알맞게<br>
+                                            지정 해주세요!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-secondary active">
+                                                <input type="radio" name="options" value="Y" id="reward_condition1"
+                                                    checked> 제한 없음
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="options" value="N" id="reward_condition2"> 제한
+                                            </label>
+                                        </div>
+                                        <div id="rewardAmount" style="display: none;">
+                                            <input type="number" class="form-control" style="width:80px;"
+                                                id="rewardCount" step="1000"><span>&nbsp;&nbsp;개</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">리워드 옵션</div>
+                                        <div class="input_explanation">
+                                            제공가능 품목 스폰서에게 보내질<br>
+                                            상품목록을 작성해주세요!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div id="reward_product">
+                                            <input type="text" class="form-control" id="reward-options"
+                                                style="width:300px" placeholder="메디케어 (x4)....">
+                                            <button class="btn btn-outline reward_btn" type="button"
+                                                id="rewardInputBtn">옵션등록</button>
+                                        </div>
+                                        <ul id="reward_list" style="margin-bottom: 20px;">
+
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">* 배송지 필요 여부</div>
+                                        <div class="input_explanation">
+                                            리워드 상품이 존재할경우 스폰서에게<br>
+                                            배송지 등록이 필요한지 먼저 알려주세요!<br>
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-secondary active">
+                                                <input type="radio" name="addrCheck" value="Y" id="reward_condition1">
+                                                배송지 필요
+                                            </label>
+                                            <label class="btn btn-secondary">
+                                                <input type="radio" name="addrCheck" value="N" id="reward_condition2">
+                                                배송지 필요없음
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">리워드 리스트</div>
+                                        <div class="input_explanation">
+                                            작성한 리워드 리스트를 확인하세요!<br>
+                                            스폰서에게 보여지는 만큼 꼼꼼한 확인<br>
+                                            을 부탁드립니다!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea" id="reward_result_display">
+                                        <div style="font-size: 0.1px; height: 0.1px; color:white">　</div>
+                                        <div id=rewardemptyMessage>저장된 리워드가 없습니다.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title"></div>
+                                        <div class="input_explanation">
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <button class="btn btn-outline reward_save_btn" type="button"
+                                            id=insertRewardBtn>리워드 저장</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bar upper handler3" id="third_bar">안내사항&nbsp;&nbsp;(미완료)</div>
-               
+
                 <div id="notice_wrapper" style="display: none;">
                     <div class="title_area">
                         <div class="title-font">안내사항</div>
@@ -506,21 +488,21 @@
                         <hr class="title_divider">
                     </div>
                     <div class="article_wrapper">
-                        <div class="leftarticle_wrapper"> 
-                    <table>
-                        <tr>
-                            <td class="explanation_wrapper">
-                            </td>
-                            <td class="userInputarea">
-                            </td>                    
-                        </tr>
-                    </table>
-                    </div>
+                        <div class="leftarticle_wrapper">
+                            <table>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                    </td>
+                                    <td class="userInputarea">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bar upper handler4" id="forth_bar">제작자/부가정보&nbsp;&nbsp;(미완료)</div>
-               
+
                 <div id="subinfo_wrapper" style="display: none;">
                     <div class="title_area">
                         <div class="title-font">제작자/부가정보</div>
@@ -528,50 +510,51 @@
                         <hr class="title_divider">
                     </div>
                     <div class="article_wrapper">
-                        <div class="leftarticle_wrapper"> 
-                    <table>
-                        <tr>
-                            <td class="explanation_wrapper">
-                            </td>
-                            <td class="userInputarea">
-                            </td>                    
-                        </tr>
-                    </table>
-                    </div>
+                        <div class="leftarticle_wrapper">
+                            <table>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                    </td>
+                                    <td class="userInputarea">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
-                    <div class="remote_fixedwrapper remote1" style="z-index: 10;">
+                <div class="remote_fixedwrapper remote1" style="z-index: 10;">
 
-                        <div class="remoteController" >
-                       <a href="#totheTop" id="topBtn"><i class="fas fa-angle-up"></i></a>
-                       <div class="remote_icon">
-                           <i class="far fa-eye"></i>
-                           <i class="far fa-save"></i>
-                           <i class="fas fa-upload"></i>
-                           <i class="fas fa-handshake"></i>
-                      </div>
-                      <div class="remote_btn remobtn1" id="firstbar_remote">스토리</div>
-                      <div class="remote_btn remobtn2" id="secondbar_remote">리워드</div>
-                      <div class="remote_btn remobtn3">안내사항</div>
-                      <div class="remote_btn remobtn4">제작자/부가정보</div>
-                      </div>
+                    <div class="remoteController">
+                        <a href="#totheTop" id="topBtn"><i class="fas fa-angle-up"></i></a>
+                        <div class="remote_icon">
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-save"></i>
+                            <i class="fas fa-upload"></i>
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="remote_btn remobtn1" id="firstbar_remote">스토리</div>
+                        <div class="remote_btn remobtn2" id="secondbar_remote">리워드</div>
+                        <div class="remote_btn remobtn3">안내사항</div>
+                        <div class="remote_btn remobtn4">제작자/부가정보</div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <!-- inputtype hidden -->
-            <div id="hiddenInputArea" style="display: none;">    
-            <input tpye="hidden" name="hashtags" id="hashtags">
-            <input tpye="hidden">
-        </div>
-        </form>
+    </div>
+    <!-- inputtype hidden -->
+    <div id="hiddenInputArea" style="display: none;">
+        <input tpye="hidden" name="hashtags" id="hashtags">
+    </div>
+    </form>
     </div>
 
-<script defer src="../../../resources/js/projectInsertForm/calculatorLettersDate.js"></script>
-<script defer src="../../../resources/js/projectInsertForm/handleScroll.js"></script>    
-<script defer src="../../../resources/js/projectInsertForm/previewImage.js"></script>
-<script defer src="../../../resources/js/projectInsertForm/hashTagController.js"></script>    
-<script defer src="../../../resources/js/projectInsertForm/rewardControll.js"></script>
-<script defer src="../../../resources/js/projectInsertForm/CKEDITOR.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/calculatorLettersDate.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/handleScroll.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/previewImage.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/hashTagController.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/rewardControll.js"></script>
+    <script defer src="../../../resources/js/projectInsertForm/CKEDITOR.js"></script>
+
 </body>
+
 </html>
