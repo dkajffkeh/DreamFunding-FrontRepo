@@ -12,14 +12,13 @@
 }
 .qna-title-detail{
     display: grid;
-    grid-template-columns: 90% 10%;
-    /* padding: 1rem; */
-    margin-left: 1rem;
+    grid-template-columns: 15% 75% 10%;
     font-size: 20px;
     font-weight: 700;
+    padding-top: 10px;
 }
 .qna-title-time{
-    margin-left: 1rem;
+    margin-left: 55px;
     padding-bottom: 1rem;
     font-size: 0.7rem;
 }
