@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #333;
+          }
+        
+        .cdMain{
+            width:1000px;            
+        }
+        .detail-area{
+            padding:50px;
+            background-color: #fff7ed;
+        }     
+        .cdTable{            
+            width:800px;                       
+            text-align:left;
+            margin:auto;
+        }
+        .cdTable *{
+                  padding:20px;      
+        }
+        
+        #ques td{
+            border:1px solid black;
+            height:500px;
+            text-align:center;
+            background-color: white;;
+        }
+        #answer td{
+            border:1px solid black;
+            height:300px;
+            text-align:center;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="inner">
+        <div class="cdMain">
+            <div class="nametag">
+                <h1>공지사항 조회</h1>
+            </div>
+            <br>
+            <div class="detail-area">
+                <table class="cdTable">
+                    <tr>
+                        <th width="120">제목 :</th>
+                        <td width="400">불러온 제목</td>                        
+                        <th width="120">작성자 : </th>
+                        <td>김태연</td>
+                    </tr>
+                    <tr>
+                        <th>작성날짜 : </th>
+                        <td>2020-11-25</td>
+                        <th>카테고리 : </th>
+                        <td>리워드</td>
+                    </tr>
+                    <tr>
+                        <th>내용</th>                        
+                    </tr>
+                    <tr id="ques">
+                        <td colspan="4">글내용자리</td>
+                    </tr>
+                </table>                
+            </div>
+            <br>
+            <div class="btnArea" align="center">
+            <button class="btn btn-secondary">목록가기</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-secondary">수정하기</button> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-danger">삭제하기</button>
+
+            </div>
+            <br>         
+        
+        <div class="detail-area">
+            <table class="cdTable">
+                <tr>
+                    <th width="520">답변</th>
+                    <th width="120">답변날짜 : </th>
+                    <td>11.26</td>                    
+                </tr>
+                <tr id="answer">
+                    <td colspan="3"> 답변내용</td>
+                </tr>
+            </table>
+        </div> 
+        <br>
+        <div class="btnArea" align="center">
+            <button class="btn btn-secondary">목록가기</button>
+            <button class="btn btn-secondary">답변수정</button>
+            <button class="btn btn-danger">답변삭제</button>
+            <br><br>
+            <button class="btn btn-secondary">목록가기</button>
+            <button class="btn btn-primary">답변하기</button>
+        </div>
+        <br>
+        <br>       
+    </div>
+    
+    </div>
+
+    
+</body>
+</html>
