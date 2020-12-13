@@ -38,9 +38,10 @@
 /* qna button */
 .sticky {
     position: sticky;
-    top: 90vh;
-    margin-left: 85vw;
+    top: 30vh;
+    margin-left: 80vw;
     height: 0;
+    z-index: 200;
 }
 .btnQna{
     border: none;
@@ -178,6 +179,143 @@
 .btn:hover{
     background-color: #fff7ed;
 }
+/* 검색 슬라이드 */
+.search-slide{
+    /* z-index: 300; */
+    border: 1px solid black;
+}
+.search-cate-btn{
+    border: none;
+    padding: 0.5rem;
+}
+.search-bot-btn{
+    border: none;
+    background-color: white;
+}
+.search-text{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    padding: 0.5rem;
+    justify-content: center;
+}
+.search-text-btn{
+    border: none;
+    background-color: white;
+}
+.search-category{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.search-category button{
+    background-color: #fff7ed;
+}
+.search-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.search-bot-btn-delete{
+    justify-self: start;
+}
+.search-bot-btn-close{
+    justify-self: end;
+}
+/* qna form */
+.qna-form{
+    width: 360px;
+}
+.qna-full{
+    background-color: white;
+    z-index: 10;
+}
+.qna-title{
+    background-color: rgb(127, 0, 0);
+    color: rgb(235, 235, 235);
+}
+.qna-title-detail{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+.qna-title-detail button{
+    background-color: rgb(127, 0, 0);
+    border-style: none;
+    color: rgb(246, 246, 247);
+}
+.qna-time{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
+    height: 100px;
+}
+.qna-time-image{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    justify-self: end;
+}
+.qna-detail{
+    display: grid;
+    grid-template-rows: 60% 40%;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow:10px 10px 30px #d3d3d3;
+}
+.qna-1{
+    padding: 1rem;
+}
+.qna-profile{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 40% 60%;
+    align-items: center;
+}
+.qna-profile-image{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+}
+.qna-profile-name{
+    font-size: 17px;
+    font-weight: 700;
+}
+.qna-profile-content{
+    line-height: 1.3rem;
+}
+.qna-start-button{
+    justify-self: center;
+    padding: 1rem;
+}
+.btn-qna{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border: solid 1px rgb(235, 235, 235);
+    font-size: 18px;
+    border-radius: 10px;
+}
+.btn-qna:hover{
+    background-color: rgb(127, 0, 0);
+    color: white;
+}
+.qna-call{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    height: 250px;
+}
+.qna-bottom{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.top{
+    position: relative;
+    z-index: 100;
+}
+
 
 
 

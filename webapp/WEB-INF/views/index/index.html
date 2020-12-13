@@ -35,8 +35,48 @@
         <!-- 로그인 전 출력 영역 -->
         <div class="header__right">
           <div class="search__box">
-            <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+            <input type="text" class="search-bar" placeholder="프로젝트 검색" id="search" />
             <span class="material-icons"> search </span>
+
+            <!-- 검색창 클릭 시 나올 창 -->
+            <div class="search-slide">
+              <div class="search-category">
+                <button class="search-cate-btn">최근</button>
+                <button class="search-cate-btn">카테고리</button>
+              </div>
+              <div class="search-text">
+                <!-- 카테고리 -->
+                <!-- <div>
+                  <ul>
+                    <li>잡지</li>
+                    <li>문학 & 에세이</li>
+                    <li>예술</li>
+                    <li>실용 & 취미</li>
+                    <li>그림책</li>
+                    <li>기타</li>
+                  </ul>
+                </div> -->
+                <!-- 최근검색어 -->
+                <div class="search-text-content">
+                  <ul>
+                    <li>
+                      강아지
+                    </li>
+                  </ul>
+                </div>
+                <div class="search-text-delete">
+                  <button class="search-text-btn">X</button>
+                </div>
+              </div>
+              <div class="search-bottom">
+                <div>
+                  <button class="search-bot-btn-delete">전체 삭제</button>
+                </div>
+                <div>
+                  <button class="search-bot-btn-close">닫기</button>
+                </div>
+              </div>
+            </div>
           </div>
           <a href="#" class="sign__group">로그인</a>
           <a href="#" class="sign__group">회원가입</a>
@@ -56,14 +96,60 @@
             ><span class="material-icons"> account_circle </span></i
           >
         </div> -->
+
+        
+
       </div>
     </header>
 
     <main class="section">
 
-      <div> <!---->
+      <div class="top"> <!---->
         <!-- 문의하기 버튼(sticky) -->
         <div class="sticky"> 
+          <!-- 문의하기 폼 -->
+          <div style="border: 1px red;" class="qna-form">
+            <div class="qna-title">
+              <div class="qna-title-detail">
+                <span>크라우디</span>
+                <button>X</button>
+              </div>
+              <div class="qna-time">
+                <div>운영시간 아님</div>
+                <div>10시간 뒤 상담이 운영됩니다.</div>
+                <div>상담시간( 9:00am - 6:00pm )</div>
+                <div class="qna-time-image">
+                  <img src="../../../resources/images/heart2.png" width="50px" height="50px">
+                </div>
+              </div>
+            </div>
+            <div class="qna-full">
+              <div class="qna-1">
+                <div class="qna-detail">
+                  <div class="qna-profile">
+                    <div class="qna-profile-image">
+                      <img src="../../../resources/images/smile.png" width="50px" height="50px">
+                    </div>
+                    <div class="qna-profile-name">드림 펀딩</div>
+                    <div class="qna-profile-content">안녕하세요. 드림펀딩입니다. <br>무엇을 도와드릴까요?</div>
+                  </div>
+                  <div class="qna-start-button">
+                    <button class="btn-qna">대화 시작</button>
+                  </div>
+                </div>
+              </div>
+              <div class="qna-call">
+                <div>고객센터 ( 031 - 8039 - 5569 )</div>
+              </div>
+              <div class="qna-bottom">
+                <div class="qna-bottom-content">
+                  <img src="../../../resources/images/smile.png" width="20px" height="20px">
+                  실시간 상담 이용중
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 문의하기 버튼 -->
           <button class="btnQna">
             <span class="spanQna">문의하기</span>
             <img src="../../../resources/images/smile.png" alt="" width="30px" height="30px">
