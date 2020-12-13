@@ -87,7 +87,10 @@
     border:none;
 }
 .card-desc { padding: 1rem; }
-.card-desc{ display: grid; grid-template-rows: 1fr 30%; }
+.card-desc{
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
 /* project-content */
 .project-content { display: flex; flex-wrap: wrap; }
 .project-company {
