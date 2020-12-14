@@ -11,6 +11,7 @@
         rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.11.1/standard-all/ckeditor.js"></script>
+  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
@@ -65,7 +66,6 @@
         </div>
     </header>
 
-
     <div id="firstlayer_outer">
         <a id="totheTop"></a>
         <form action="" id="insertConroller">
@@ -75,14 +75,14 @@
                 <button class="btn btn-primary btn2" type="button"><i class="far fa-save"></i>&nbsp;&nbsp;임시저장</button>
                 <button class="btn btn-primary btn3" type="button"><i
                         class="fas fa-upload"></i>&nbsp;&nbsp;불러오기</button>
-                <button class="btn btn-primary btn4" type="button"><i
+                <button class="btn btn-primary btn4" type="button" disabled><i
                         class="fas fa-handshake"></i>&nbsp;&nbsp;승인요청하기</button>
             </div>
 
             <div id="secondlayer_outer">
 
                 <div class="bar upper handler1" id="first_bar">스토리&nbsp;&nbsp;(미완료)</div>
-                <div id="story_wrapper" style="display: none;">
+                <div id="story_wrapper" style="display: block;">
                     <div class="title_area">
                         <div class="title-font">스토리</div>
                         <div class="subtitle-font">주요 정보가 담길 멋진 스토리를 담아주세요!</div>
@@ -103,11 +103,11 @@
 
                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-secondary active">
-                                                <input type="radio" name="options" value="Y" id="pro_condition1"> 100%
+                                                <input type="radio" name="projectSuccessCondition" value="Y" id="pro_condition1"> 100%
                                                 이상
                                             </label>
                                             <label class="btn btn-secondary">
-                                                <input type="radio" name="options" value="N" id="pro_condition2"> 조건 없음
+                                                <input type="radio" name="projectSuccessCondition" value="N" id="pro_condition2" checked> 조건 없음
                                             </label>
                                         </div>
 
@@ -115,7 +115,7 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">카테고리</div>
+                                        <div class="inputList_title">*카테고리</div>
                                         <div class="input_explanation">
                                             프로젝트 카테고리를
                                             넣어주세요<br></div>
@@ -134,17 +134,15 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">프로젝트 제목</div>
+                                        <div class="inputList_title">*프로젝트 제목</div>
                                         <div class="input_explanation">
                                             자신의 프로젝트를 대변하는<br>
                                             멋진 제목을 작성해 주세요!
 
                                         </div>
                                     </td>
-
                                     <td class="userInputarea">
-
-                                        <input type="text" class="form-control pro_title" placeholder="50자 이내로 작성해 주세요"
+                                        <input type="text" class="form-control pro_title" placeholder="50자 이내로 작성해 주세요" name="projectTitle"
                                             maxlength="49">
                                         <div class="lettercounter lc">0/50</div>
 
@@ -152,30 +150,30 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">프로젝트 짧은 제목</div>
+                                        <div class="inputList_title">*프로젝트 짧은 제목</div>
                                         <div class="input_explanation">검색에 더 많이 노출될 수 있도록<br>
                                             부제목을 넣어주세요!</div>
                                     </td>
                                     <td class="userInputarea">
-                                        <input type="text" class="form-control pro_title1" placeholder="50자 이내로 작성해 주세요"
+                                        <input type="text" class="form-control pro_title1" placeholder="50자 이내로 작성해 주세요" name="projectSubTitle"
                                             maxlength="49">
                                         <div class="lettercounter lc1">0/50</div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">목표 금액</div>
+                                        <div class="inputList_title">*목표 금액</div>
                                         <div class="input_explanation">
                                             마감일 자정 기준 목표금액<br>
                                             미달성시 프로젝트가 자동 <br> 취소됩니다.(최소금액 10만원)
                                         </div>
                                     </td>
-                                    <td class="userInputarea"><input type="number" name=""
+                                    <td class="userInputarea"><input type="number" name="projectGoal"
                                             class="form-control pri_amount" placeholder="100,000"></td>
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">프로젝트 고유주소</div>
+                                        <div class="inputList_title">*프로젝트 고유주소</div>
                                         <div class="input_explanation">내 프로젝트 주소를 넣어주세요!</div>
                                     </td>
                                     <td class="userInputarea" style="display: flex;
@@ -183,12 +181,12 @@
                                                                  font-size: 1.2rem;
                                                                  ">http://localhost:8888/dreamfunding?proUrl=
                                         <input type="text" style="width:200px" class="form-control"
-                                            placeholder="dreamfunding">
+                                            placeholder="dreamfunding" name="projectUrl">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">진행 기간</div>
+                                        <div class="inputList_title">*진행 기간</div>
                                         <div class="input_explanation">
                                             마감일은 시작일 보다 이전 날짜를<br>
                                             고를수 없으며 100일이상일 경우<br>
@@ -201,12 +199,12 @@
                                         <div style="border:1px solid lightgray;
                                                 padding: 0px 20px 20px 20px;">
                                             <div id="calenderbox" style="margin-top: 20px;">
-                                                <input type="date" class="form-control date start">
+                                                <input type="date" class="form-control date start" name="projectStartDate">
                                                 <div style="line-height: 40px;
                                                 font-size: 1.2rem;
                                                 margin-right: 10px;
                                                 margin-left: 10px;">~</div>
-                                                <input type="date" class="form-control date end">
+                                                <input type="date" class="form-control date end" name="projectEndDate">
                                             </div>
                                             <div class="datedisplay" style="display: flex;">
                                                 <div class="startdate" style="width:280px;
@@ -224,7 +222,7 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">대표이미지</div>
+                                        <div class="inputList_title">*대표이미지</div>
                                         <div class="input_explanation">
                                             프로젝트 개성과 성격이 한눈에<br>
                                             보여질 사진이 좋습니다!
@@ -248,7 +246,7 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">프로필 이미지</div>
+                                        <div class="inputList_title">*프로필 이미지</div>
                                         <div class="input_explanation">
                                             프로젝트에 보여질 나의 모습을<br>
                                             담아주세요!
@@ -285,7 +283,7 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">창작자 짧은 소개</div>
+                                        <div class="inputList_title">*창작자 짧은 소개</div>
                                         <div class="input_explanation">
                                             이용자의 마음을 살수있는 창작자님의 <br>
                                             짧은 소개를 남겨주세요!<br>
@@ -293,7 +291,7 @@
                                         </div>
                                     </td>
                                     <td class="userInputarea">
-                                        <input type="text" style="width:600px" class="form-control" id="creater-intro"
+                                        <input type="text" style="width:600px" class="form-control" id="creater-intro" name="creatorIntro"
                                             maxlength="49" placeholder="소개는 50자 이내로 작성해 주세요!">
                                         <div class="lettercounter lc2">0/50</div>
                                     </td>
@@ -340,7 +338,7 @@
                                 </tr>
                                 <tr>
                                     <td class="explanation_wrapper">
-                                        <div class="inputList_title">스토리</div>
+                                        <div class="inputList_title">*스토리</div>
                                         <div class="input_explanation">
                                             프로젝트를 소개할 수 있는 이야기를 <br>
                                             사진과 함께 업로드 해주세요.
@@ -349,7 +347,7 @@
                                     <td class="userInputarea">
                                         <div style="color: white; font-size: 0.1px; height: 0.1px; width: 0.1px;">　
                                         </div>
-                                        <textarea name="" id="editor.ck"></textarea>
+                                        <textarea name="projectContent" id="editor.ck"></textarea>
                                     </td>
                                 </tr>
 
@@ -361,7 +359,7 @@
 
                 <div class="bar upper handler2" id="second_bar">리워드&nbsp;&nbsp;(미완료)</div>
 
-                <div id="reward_wrapper">
+                <div id="reward_wrapper" style="display:none">
                     <div class="title_area">
                         <div class="title-font">리워드</div>
                         <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
@@ -378,14 +376,15 @@
                                             알맞지 않는 금액 입력시 프로젝트 기각<br>
                                             사유가 될 수 있습니다.
                                         </div>
-                                        </td>
-                                        <td class="userInputarea">
-                                            <input type="number" class="form-control" style="width: 350px;" id="rewardPrice" required>
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="explanation_wrapper">
-                                                <div class="inputList_title">* 리워드 제공 가능 수</div>
+                                    </td>
+                                    <td class="userInputarea">
+                                        <input type="number" class="form-control" style="width: 350px;" id="rewardPrice"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">* 리워드 제공 가능 수</div>
                                         <div class="input_explanation">
                                             리워드 제공 수를 입력하여 주세요 <br>
                                             인지도에 따라 제공가능 수를 알맞게<br>
@@ -460,7 +459,7 @@
                                     </td>
                                     <td class="userInputarea" id="reward_result_display">
                                         <div style="font-size: 0.1px; height: 0.1px; color:white">　</div>
-                                        <div id=rewardemptyMessage>저장된 리워드가 없습니다.</div>
+                                        <div id=rewardemptyMessage>저장된 리워드가 없습니다. 리워드를 추가 해주세요!</div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -481,10 +480,10 @@
 
                 <div class="bar upper handler3" id="third_bar">안내사항&nbsp;&nbsp;(미완료)</div>
 
-                <div id="notice_wrapper" style="display: none;">
+                <div id="notice_wrapper" style="padding-bottom: 30px; display: none;">
                     <div class="title_area">
                         <div class="title-font">안내사항</div>
-                        <div class="subtitle-font">스폰서에게 보내질 상품과 수량을 입력해주세요!</div>
+                        <div class="subtitle-font">환불 규정 및 연락처를 공유해주세요!</div>
                         <hr class="title_divider">
                     </div>
                     <div class="article_wrapper">
@@ -492,10 +491,72 @@
                             <table>
                                 <tr>
                                     <td class="explanation_wrapper">
+                                        <div class="inputList_title">*환불 및 교환정책</div>
+                                        <div class="input_explanation">
+                                            환불및 교환정책을 입력하여주세요<br>
+                                            민감한 사안을 좀더 매끄럽게 해결하기 위해<br>
+                                            명확한 표현을 이용하여 작성해주세요<br>
+                                        </div>
                                     </td>
                                     <td class="userInputarea">
+                                        <div style="font-size: 0.1px; height: 0.1px; color:white">　</div>
+                                        <textarea name="" class="form-control" id="editor2.ck"></textarea>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">문의 가능번호</div>
+                                        <div class="input_explanation">
+                                            이용자에게 노출될 번호를 정해주세요<br>
+                                            노출을 원하지 않으실 경우 반드시 채크박에스<br>
+                                            클릭을 해주십시오.          
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea" style="display: flex; margin-top: 50px; align-items: center;">
+                                        <input type="text" 
+                                               class="form-control" 
+                                               style="width:300px"
+                                               placeholder="010-1111-2222"> 
+                                        <input type="checkbox" 
+                                               name="revealCheck"
+                                               id="revealCheck">
+                                        <label for="revealCheck" style="font-size: 1.1rem;">번호 공개</label>    
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title">*문의 이메일</div>
+                                        <div class="input_explanation">
+                                            이용자에게 노출될 이메일을 올려주세요<br>
+                                            이메일은 반드시 노출해야 하며 오타가 없는지<br>
+                                            꼼꼼해 체크해주세요!
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea">          
+                                        <input type="email" 
+                                        name="email"
+                                        class="form-control" 
+                                        style="width:300px;"
+                                        placeholder="yhy1011@naver.com">       
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="explanation_wrapper">
+                                        <div class="inputList_title"></div>
+                                        <div class="input_explanation">
+                                        </div>
+                                    </td>
+                                    <td class="userInputarea" style="background-color: lightgray; border-radius: 5px; padding: 3px 5px 3px 5px;">
+                                        <div>
+                                           <span style="font-size: 1.2rem;">모든 프로젝트 공통</span> <br>
+                                            - 프로젝트 마감일 후에는 즉시 제작 및 실행에 착수하는 프로젝트 특성상 단순 변심에 의한 후원금 환불이 불가능합니다. <br>
+                                            - 예상 전달일로부터 15일 이상 선물 전달이 이뤄지지 않을 경우, 환불을 원하시는 분들께는 수수료를 제외한 후원금을 환불해 드립니다. <br>
+                                            (플랫폼 수수료: 모금액의 5%, 부가세 별도 / 결제 수수료: 결제 성공액의 3%, 부가세 별도 ) <br>
+                                            - 선물 전달을 위한 배송지 및 서베이 답변은  2020년 12월 29일 에 일괄 취합할 예정입니다. <br>
+                                            - 이후 배송지 변경이나 서베이 답변 변경을 원하실 때에는 '창작자에게 문의하기'로 개별 문의하셔야 합니다. <br>    
+                                        </div>                 
+                                    </td>                      
+                                </tr>                              
                             </table>
                         </div>
                     </div>
@@ -513,11 +574,64 @@
                         <div class="leftarticle_wrapper">
                             <table>
                                 <tr>
-                                    <td class="explanation_wrapper">
-                                    </td>
-                                    <td class="userInputarea">
-                                    </td>
-                                </tr>
+                                <td class="explanation_wrapper">
+                                    <div class="inputList_title">*거래은행</div>
+                                    <div class="input_explanation">
+                                        프로젝트 이용자에게 받은 후원금이 전달될<br>
+                                        은행을 적어주세요.            
+                                    </div>
+                                </td>
+                                <td class="userInputarea">
+                                    <select name="bank" id="" class="form-control" style="width:200px">
+                                        <option value="신한은행" selected>신한은행</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="explanation_wrapper">
+                                    <div class="inputList_title">*계좌번호</div>
+                                    <div class="input_explanation">
+                                     은행에 해당하는 계좌번호를 입력해주세요<br>
+                                     옳바른 계좌번호인지 반드시 두번 확인<br>
+                                     해주세요.
+                                    </div>
+                                </td>
+                                <td class="userInputarea">
+                               <input type="text" name="bankAccount" class="form-control" placeholder="110-296-109579" style="width: 250px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="explanation_wrapper">
+                                    <div class="inputList_title">*예금주 명</div>
+                                    <div class="input_explanation">
+                                    입력하신 계좌번호에 해당하는 예금주 명을 <br>
+                                    옳바르게 입력해주세요.
+                                    </div>
+                                </td>
+                                <td class="userInputarea">
+                                    <input type="text" name="accountHolder" class="form-control" placeholder="홍길동" style="width:130px" >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="explanation_wrapper">
+                                    <div class="inputList_title">홈페이지와 SNS 주소</div>
+                                    <div class="input_explanation">
+                                        나의 프로젝트를 홍보할 수 있는 나만의<br>
+                                        웹사이트나 SNS 주소를 업로드 해주세요.
+                                    </div>
+                                </td>
+                                <td class="userInputarea">
+                                    <div class="snsInput"><i class="fas fa-globe">
+
+                                    </i><input type="text" class="form-control" placeholder="https://www.ups.com/" style="width:450px"></div>
+                                    <div class="snsInput"><i class="fab fa-instagram">
+
+                                    </i><input type="text" class="form-control" placeholder="https://www.facebook.com/dkajffkeh" style="width:450px"></div>
+                                    <div class="snsInput"><i class="fab fa-facebook-square">
+
+                                    </i><input type="text" class="form-control" placeholder="https://www.instagram.com/yoo_patrick/" style="width:450px"></div>
+                                </td>
+                            </tr>
                             </table>
                         </div>
                     </div>
@@ -535,8 +649,8 @@
                         </div>
                         <div class="remote_btn remobtn1" id="firstbar_remote">스토리</div>
                         <div class="remote_btn remobtn2" id="secondbar_remote">리워드</div>
-                        <div class="remote_btn remobtn3">안내사항</div>
-                        <div class="remote_btn remobtn4">제작자/부가정보</div>
+                        <div class="remote_btn remobtn3" id="thirdbar_remote">안내사항</div>
+                        <div class="remote_btn remobtn4" id="forthbar_remote">제작자/부가정보</div>
                     </div>
                 </div>
             </div>
@@ -547,7 +661,7 @@
     </div>
     </form>
     </div>
-
+    <script defer src="../../../resources/js/projectInsertForm/completeCheck.js"></script>
     <script defer src="../../../resources/js/projectInsertForm/calculatorLettersDate.js"></script>
     <script defer src="../../../resources/js/projectInsertForm/handleScroll.js"></script>
     <script defer src="../../../resources/js/projectInsertForm/previewImage.js"></script>

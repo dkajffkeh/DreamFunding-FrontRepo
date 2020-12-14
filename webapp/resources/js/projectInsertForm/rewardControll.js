@@ -47,7 +47,7 @@ function deleteList(event) {
 $("#insertRewardBtn").click(function () {
 
     const rewardPrice_check = $("#rewardPrice").val().trim().length == 0; //리워드 금액 null 아님 뭐라도 적으면 true;
-    const rewardCondition = $("input[name='options']:checked").val(); //리워드 제공수 가져옴.
+    const rewardCondition = $("input[name='options']:checked").val(); //리워드 제공옵션(제공가능 . 제한) 가져옴.
     const addrCheck = $("input[name='addrCheck']:checked").val(); //Y 필요 N 불필요.
     const rewardCount = $("#rewardCount").val().trim().length == 0;
     const rewardList = $("#reward_list > li");
@@ -82,14 +82,28 @@ $("#insertRewardBtn").click(function () {
                                 </ul>
                                 <div class="rewardTitleWrapper">
                                 <div class="reward-font">배송지 필요여부 : '${addrCheck}'</div>
-                                <i class="fas fa-trash-alt deleteReward" removeReward(this)></i>
+                                <i class="fas fa-trash-alt deleteReward" onclick=removeReward(this)></i>
+                                <div style="display:none">${$("#rewardPrice").val()}원 리워드</div>
                                 </div>
-                                </div>
-                                `
+                                <input type="hidden" name="rewardTitle" value="${$("#rewardPrice").val()}">
+                                <input type="hidden" name="rewardnumber" value="${rewardList.length}">
+                                <input type="hidden" name="rewardCondition" value="${rewardCondition}">
+                                <input type="hidden" name="rewardPrice" value="${$("#rewardPrice").val()}">
+                                    <input type="hidden" name="rewardAddrCheck" value="${addrCheck}">`
+            for (let i = 0; i < rewardList.length; i++) {
+                rewardResult += `<input type="hidden" name="rewardOption" value="${rewardList[j].innerHTML}">`;
+            }
+
+
+            rewardResult += `
+                                    </div>
+                                    `
             $("#rewardemptyMessage").css('display', 'none');
             //입력값을 초기화.
             clearValues();
+            //입력값 있는지 없는지 확인.
             displayResult.append(rewardResult);
+            completeCheck();
 
         } else { //유제한
 
@@ -119,13 +133,28 @@ $("#insertRewardBtn").click(function () {
                                 <div class="rewardTitleWrapper">
                                 <div class="reward-font">배송지 필요여부 : '${addrCheck}'</div>
                                 <i class="fas fa-trash-alt deleteReward" onclick=removeReward(this)></i>
+                                <div style="display:none">${$("#rewardPrice").val()}원 리워드</div>
                                 </div>
+                                <input type="hidden" name="rewardTitle" value="${$("#rewardPrice").val()}">
+                                <input type="hidden" name="rewardnumber" value="${rewardList.length}">
+                                <input type="hidden" name="rewardCondition" value="${rewardCondition}">
+                                <input type="hidden" name="rewardPrice" value="${$("#rewardPrice").val()}">
+                                <input type="hidden" name="rewardAddrCheck" value="${addrCheck}">
+                                `
+                for (let i = 0; i < rewardList.length; i++) {
+                    rewardResult += `<input type="hidden" name="rewardOption" value="${rewardList[i].innerHTML}">`;
+                }
+
+
+                rewardResult += `
                                 </div>
                                 `
                 $("#rewardemptyMessage").css('display', 'none');
                 //입력갑 초기화 하는 함수
                 clearValues();
+                //입력값 있는지 없는지 확인
                 displayResult.append(rewardResult);
+                completeCheck();
 
             }
         }
@@ -135,36 +164,51 @@ $("#insertRewardBtn").click(function () {
     }
 
 })
-
+//버튼 클릭후 입력 칸 비워줌.
 function clearValues() {
 
     $("#rewardPrice").val('');
     $("#rewardCount").val('');
     $("#reward-options").val('');
-
     $("#reward_list > li").remove();
-
 
 }
 
+function removeReward(event) {
 
-/*
-                              <div class="rewardContaioner">
-                                    <div class="rewardTitleWrapper">
-                                    <div class="reward-font">29,000</div>
-                                    <div class="reward-font">제공수:</div>
-                                </div>`
-                                <ul class="rewardOptionLists">
-                                    <li>asd</li>
-                                    <li>asd</li>
-                                    <li>asd</li>
-                                </ul>
-                                <div class="rewardTitleWrapper">
-                                <div class="reward-font">배송지 필요여부 : 'Yes'</div>
-                                <i class="fas fa-trash-alt deleteReward"></i>
-                            </div>
-                            </div>
+    if (confirm(event.nextElementSibling.innerHTML + " 원 리워드를 삭제 하시겠습니까?")) {
+        event.parentNode.parentNode.remove();
 
-*/
+        if ($("#reward_result_display > div").length == 2) {
+            $("#rewardemptyMessage").css('display', 'block');
+
+            completeCheck();
+        }
+    }
+
+}
+//작업 완료도를 체크할 수 있음.
+function completeCheck() {
+
+    if ($("#reward_result_display > div").length > 2) {
+
+        $("#second_bar").css('background-color', '#8c2a2a');
+        $("#second_bar").css('color', '#ffffffff');
+        $("#second_bar").text('리워드  (작성완료)');
+
+        $("#secondbar_remote").css('background-color', '#8c2a2a');
+        $("#secondbar_remote").css('color', '#ffffffff');
+
+    } else {
+
+        $("#second_bar").css('background-color', ' #c6a36e');
+        $("#second_bar").css('color', '#ffffffff');
+        $("#second_bar").text('리워드  (미완료)');
 
 
+        $("#secondbar_remote").css('background-color', '#ffffffff');
+        $("#secondbar_remote").css('color', 'rgb(80, 80, 80)');
+
+    }
+
+}
