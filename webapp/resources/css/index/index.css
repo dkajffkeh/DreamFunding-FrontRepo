@@ -15,47 +15,29 @@
     position: absolute;
     bottom: 200px;
     left: 10px;
-    background-image: url(../images/arrow-left.png);
     height: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     padding: 1rem;
-    border:none;
+}
+.btn1 .material-icons{
+    font-size: 48px;
+}
+.btn1 .material-icons:hover{
+    color: rgb(127, 0, 0);
 }
 .btn2{
     position: absolute;
     bottom: 200px;
-    left: 1150px;
-    background-image: url(../images/arrow-right.png);
+    left: 1100px;
     height: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     padding: 1rem;
-    border:none;
 }
-/* qna button */
-.sticky {
-    position: sticky;
-    top: 30vh;
-    margin-left: 80vw;
-    height: 0;
-    z-index: 200;
+.btn2 .material-icons{
+    font-size: 48px;
 }
-.btnQna{
-    border: none;
-    background-color: #fff7ed;
+.btn2 .material-icons:hover{
     color: rgb(127, 0, 0);
-    font-weight: 700;
-    font-size: large;
-    height: 3rem;
-    width: 130px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
-.spanQna{
-    vertical-align: top;
-}
+
 /* card list */
 .card-list {
 	display: grid;
@@ -78,13 +60,17 @@
 }
 .card-image img { display: none; }
 .like{
+    display: flex;
     float: right;
-    height: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 1rem;
-    border:none;
+    border: none;
+    color: rgb(218, 216, 216);
+    padding: 0.3rem;
+}
+.like .material-icons{
+    font-size: 36px;
+}
+.like:hover{
+    color: rgb(127, 0, 0);
 }
 .card-desc { padding: 1rem; }
 .card-desc{
@@ -184,7 +170,7 @@
 }
 /* 검색 슬라이드 */
 .search-slide{
-    /* z-index: 300; */
+    z-index: 200;
     border: 1px solid black;
 }
 .search-cate-btn{
@@ -225,14 +211,16 @@
 /* qna form */
 .qna-form{
     width: 360px;
+    display: none;
 }
 .qna-full{
-    background-color: white;
+    background-color: rgb(245, 245, 245);
     z-index: 10;
 }
+
 .qna-title{
     background-color: rgb(127, 0, 0);
-    color: rgb(235, 235, 235);
+    color: rgb(241, 241, 241);
 }
 .qna-title-detail{
     display: grid;
@@ -258,11 +246,16 @@
     grid-row: 1/4;
     justify-self: end;
 }
+.qna-time-image #moon{
+    font-size: 48px;
+    color: orange;
+}
 .qna-detail{
     display: grid;
     grid-template-rows: 60% 40%;
     padding: 1rem;
     border-radius: 5px;
+    background-color: white;
     box-shadow:10px 10px 30px #d3d3d3;
 }
 .qna-1{
@@ -278,6 +271,9 @@
     grid-column: 1/2;
     grid-row: 1/3;
     align-self: center;
+}
+.qna-profile-image #face{
+    font-size: 48px;
 }
 .qna-profile-name{
     font-size: 17px;
@@ -312,11 +308,40 @@
     display: flex;
     flex-grow: 1;
     justify-content: center;
+    align-content: center;
     padding: 0.5rem;
+}
+#bottom-face{
+    font-size: 18px;
+    color: rgb(127, 0, 0);
 }
 .top{
     position: relative;
     z-index: 100;
+}
+/* qna button */
+.sticky {
+    position: sticky;
+    top: 30vh;
+    margin-left: 80vw;
+    height: 0;
+    z-index: 200;
+}
+.btnQna{
+    border: none;
+    background-color: #fff7ed;
+    color: rgb(127, 0, 0);
+    font-weight: 700;
+    font-size: 20px;
+    height: 3rem;
+    width: 130px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.btnQna .material-icons{
+    font-size: 30px;
+}
+.spanQna{
+    vertical-align: top;
 }
 
 
