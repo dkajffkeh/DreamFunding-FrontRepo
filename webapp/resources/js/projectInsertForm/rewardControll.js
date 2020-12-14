@@ -196,8 +196,6 @@ function completeCheck() {
         $("#second_bar").css('color', '#ffffffff');
         $("#second_bar").text('리워드  (작성완료)');
 
-        $("#secondbar_remote").css('background-color', '#8c2a2a');
-        $("#secondbar_remote").css('color', '#ffffffff');
 
     } else {
 
@@ -206,8 +204,6 @@ function completeCheck() {
         $("#second_bar").text('리워드  (미완료)');
 
 
-        $("#secondbar_remote").css('background-color', '#ffffffff');
-        $("#secondbar_remote").css('color', 'rgb(80, 80, 80)');
 
     }
 

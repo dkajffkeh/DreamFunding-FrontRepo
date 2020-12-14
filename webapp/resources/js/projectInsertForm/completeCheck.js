@@ -1,5 +1,12 @@
 'user strict'
 
+$(function () {
+
+    $(".btn-primary.btn4").attr('disabled', true);
+
+
+})
+
 $("#story_wrapper input").on('focus keyup change', function () {
 
     const projectCondition = $("input[name='projectSuccessCondition']:checked").val() != "";
@@ -41,8 +48,7 @@ $("#story_wrapper input").on('focus keyup change', function () {
         $("#first_bar").css('color', '#ffffffff');
         $("#first_bar").text('스토리  (작성완료)');
 
-        $("#firstbar_remote").css('background-color', '#8c2a2a');
-        $("#firstbar_remote").css('color', '#ffffffff');
+
 
     } else {
 
@@ -50,10 +56,9 @@ $("#story_wrapper input").on('focus keyup change', function () {
         $("#first_bar").css('color', '#ffffffff');
         $("#first_bar").text('스토리  (미완료)');
 
-        $("#firstbar_remote").css('background-color', '#ffffffff');
-        $("#firstbar_remote").css('color', 'rgb(80, 80, 80)');
-
     }
+
+    completeCheck();
 
 })
 
@@ -71,8 +76,8 @@ $("#notice_wrapper input").on('keyup', function () {
         $("#third_bar").css('color', '#ffffffff');
         $("#third_bar").text('안내사항  (작성완료)');
 
-        $("#thirdbar_remote").css('background-color', '#8c2a2a');
-        $("#thirdbar_remote").css('color', '#ffffffff');
+
+
 
     } else {
 
@@ -80,8 +85,6 @@ $("#notice_wrapper input").on('keyup', function () {
         $("#third_bar").css('color', '#ffffffff');
         $("#third_bar").text('안내사항  (미완료)');
 
-        $("#thirdbar_remote").css('background-color', '#ffffffff');
-        $("#thirdbar_remote").css('color', 'rgb(80, 80, 80)');
 
     }
 
@@ -100,8 +103,6 @@ $("#subinfo_wrapper").on('keyup focus', function () {
         $("#forth_bar").css('color', '#ffffffff');
         $("#forth_bar").text('제작자/부가정보  (작성완료)');
 
-        $("#forthbar_remote").css('background-color', '#8c2a2a');
-        $("#forthbar_remote").css('color', '#ffffffff');
 
 
     } else {
@@ -110,11 +111,31 @@ $("#subinfo_wrapper").on('keyup focus', function () {
         $("#forth_bar").css('color', '#ffffffff');
         $("#forth_bar").text('제작자/부가정보   (미완료)');
 
-        $("#forthdbar_remote").css('background-color', '#ffffffff');
-        $("#forthdbar_remote").css('color', 'rgb(80, 80, 80)');
 
     }
 
 })
 
+$("input").on('focus keyup change', function () {
+    const barColor = $(".bar.upper");
+    let result = 0;
+
+
+    for (let i = 0; i < barColor.length; i++) {
+
+        if (barColor[i].style.backgroundColor == 'rgb(140, 42, 42)') {
+            result++;
+        }
+        console.log(result);
+
+    }
+
+    if (result == 4) {
+
+        $(".btn-primary.btn4").attr('disabled', false);
+    } else {
+        $(".btn-primary.btn4").attr('disabled', true);
+    }
+
+})
 
