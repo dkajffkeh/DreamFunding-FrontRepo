@@ -87,8 +87,6 @@ $("#notice_wrapper input").on('keyup', function () {
 
 
     }
-
-
 })
 
 $("#subinfo_wrapper").on('keyup focus', function () {
