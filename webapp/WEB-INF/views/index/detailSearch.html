@@ -66,55 +66,76 @@
         <!-- 문의하기 폼 들어갈곳 -->
         <div class="top"> <!---->
             <!-- 문의하기 버튼(sticky) -->
-            <div class="sticky"> 
-              <!-- 문의하기 폼 -->
-              <div style="border: 1px red;" class="qna-form">
-                <div class="qna-title">
-                  <div class="qna-title-detail">
-                    <span>크라우디</span>
-                    <button>X</button>
-                  </div>
-                  <div class="qna-time">
-                    <div>운영시간 아님</div>
-                    <div>10시간 뒤 상담이 운영됩니다.</div>
-                    <div>상담시간( 9:00am - 6:00pm )</div>
-                    <div class="qna-time-image">
-                      <img src="../../../resources/images/heart2.png" width="50px" height="50px">
-                    </div>
-                  </div>
+        <div class="sticky"> 
+          <!-- 문의하기 폼 -->
+          <div class="qna-form" id="showHide">
+            <div class="qna-title">
+              <div class="qna-title-detail">
+                <span>크라우디</span>
+                <button onclick=qnaClose();>X</button>
+              </div>
+              <div class="qna-time">
+                <div>운영시간 아님</div>
+                <div>10시간 뒤 상담이 운영됩니다.</div>
+                <div>상담시간( 9:00am - 6:00pm )</div>
+                <div class="qna-time-image">
+                  <span class="material-icons md-48" id="moon">brightness_2</span>
                 </div>
-                <div class="qna-full">
-                  <div class="qna-1">
-                    <div class="qna-detail">
-                      <div class="qna-profile">
-                        <div class="qna-profile-image">
-                          <img src="../../../resources/images/smile.png" width="50px" height="50px">
-                        </div>
-                        <div class="qna-profile-name">드림 펀딩</div>
-                        <div class="qna-profile-content">안녕하세요. 드림펀딩입니다. <br>무엇을 도와드릴까요?</div>
-                      </div>
-                      <div class="qna-start-button">
-                        <button class="btn-qna">대화 시작</button>
-                      </div>
+              </div>
+            </div>
+            <div class="qna-full">
+              <div class="qna-1">
+                <div class="qna-detail">
+                  <div class="qna-profile">
+                    <div class="qna-profile-image">
+                      <span class="material-icons md-48" id="face">face</span>
                     </div>
+                    <div class="qna-profile-name">드림 펀딩</div>
+                    <div class="qna-profile-content">안녕하세요. 드림펀딩입니다. <br>무엇을 도와드릴까요?</div>
                   </div>
-                  <div class="qna-call">
-                    <div>고객센터 ( 031 - 8039 - 5569 )</div>
-                  </div>
-                  <div class="qna-bottom">
-                    <div class="qna-bottom-content">
-                      <img src="../../../resources/images/smile.png" width="20px" height="20px">
-                      실시간 상담 이용중
-                    </div>
+                  <div class="qna-start-button">
+                    <button class="btn-qna">대화 시작</button>
                   </div>
                 </div>
               </div>
-              <!-- 문의하기 버튼 -->
-              <button class="btnQna">
-                <span class="spanQna">문의하기</span>
-                <img src="../../../resources/images/smile.png" alt="" width="30px" height="30px">
-              </button>
+              <div class="qna-call">
+                <div>고객센터 ( 031 - 8039 - 5569 )</div>
+              </div>
+              <div class="qna-bottom">
+                <div class="qna-bottom-content">
+                  <span class="material-icons" id="bottom-face">face</span>
+                  <span>실시간 상담 이용중</span>
+                </div>
+              </div>
             </div>
+          </div>
+          <!-- 문의하기 버튼 -->
+          <button class="btnQna" onclick=showHide(); >
+            <span class="spanQna">문의하기</span>
+            <span class="material-icons md-48" id="face">face</span>
+          </button>
+        </div>
+
+        <!-- 문의하기 스크립트 -->
+        <script>
+          
+          function showHide(){
+              if(document.getElementById("showHide").style.display =='none'){
+                  document.getElementById("showHide").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHide").style.display ='none';
+              }
+          }
+          function qnaClose(){
+              if(document.getElementById("showHide").style.display =='none'){
+                  document.getElementById("showHide").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHide").style.display ='none';
+              }
+          }
+        </script>
 
             <div class="inner">
             

@@ -54,74 +54,84 @@
 }
 .funding-d-day { justify-content: flex-end; }
 /* qna form */
-.qna-form{
+.qna-form {
     width: 360px;
+    display: none;
 }
-.qna-full{
-    background-color: white;
+.qna-full {
+    background-color: rgb(245, 245, 245);
     z-index: 10;
 }
-.qna-title{
+
+.qna-title {
     background-color: rgb(127, 0, 0);
-    color: rgb(235, 235, 235);
+    color: rgb(241, 241, 241);
 }
-.qna-title-detail{
+.qna-title-detail {
     display: grid;
     grid-template-columns: 90% 10%;
     padding: 1rem;
     font-size: 20px;
     font-weight: 700;
 }
-.qna-title-detail button{
+.qna-title-detail button {
     background-color: rgb(127, 0, 0);
     border-style: none;
     color: rgb(246, 246, 247);
 }
-.qna-time{
+.qna-time {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: repeat(3, 1fr);
     padding: 1rem;
     height: 100px;
 }
-.qna-time-image{
+.qna-time-image {
     grid-column: 2/3;
     grid-row: 1/4;
     justify-self: end;
 }
-.qna-detail{
+.qna-time-image #moon {
+    font-size: 48px;
+    color: orange;
+}
+.qna-detail {
     display: grid;
     grid-template-rows: 60% 40%;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow:10px 10px 30px #d3d3d3;
+    background-color: white;
+    box-shadow: 10px 10px 30px #d3d3d3;
 }
-.qna-1{
+.qna-1 {
     padding: 1rem;
 }
-.qna-profile{
+.qna-profile {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 40% 60%;
     align-items: center;
 }
-.qna-profile-image{
+.qna-profile-image {
     grid-column: 1/2;
     grid-row: 1/3;
     align-self: center;
 }
-.qna-profile-name{
+.qna-profile-image #face {
+    font-size: 48px;
+}
+.qna-profile-name {
     font-size: 17px;
     font-weight: 700;
 }
-.qna-profile-content{
+.qna-profile-content {
     line-height: 1.3rem;
 }
-.qna-start-button{
+.qna-start-button {
     justify-self: center;
     padding: 1rem;
 }
-.btn-qna{
+.btn-qna {
     width: 200px;
     height: 40px;
     background-color: white;
@@ -129,25 +139,54 @@
     font-size: 18px;
     border-radius: 10px;
 }
-.btn-qna:hover{
+.btn-qna:hover {
     background-color: rgb(127, 0, 0);
     color: white;
 }
-.qna-call{
+.qna-call {
     display: flex;
     flex-grow: 1;
     justify-content: center;
     height: 250px;
 }
-.qna-bottom{
+.qna-bottom {
     display: flex;
     flex-grow: 1;
     justify-content: center;
+    align-content: center;
     padding: 0.5rem;
 }
-.top{
+#bottom-face {
+    font-size: 18px;
+    color: rgb(127, 0, 0);
+}
+.top {
     position: relative;
     z-index: 100;
+}
+/* qna button */
+.sticky {
+    position: sticky;
+    top: 10vh;
+    margin-left: 80vw;
+    height: 0;
+    z-index: 200;
+}
+.btnQna {
+    border: none;
+    background-color: #fff7ed;
+    color: rgb(127, 0, 0);
+    font-weight: 700;
+    font-size: 20px;
+    height: 3rem;
+    width: 130px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.btnQna .material-icons {
+    font-size: 30px;
+}
+.spanQna {
+    vertical-align: top;
 }
 /* qna button */
 .sticky {

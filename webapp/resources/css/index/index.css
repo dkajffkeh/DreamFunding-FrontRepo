@@ -371,7 +371,7 @@
 /* qna button */
 .sticky {
     position: sticky;
-    top: 30vh;
+    top: 10vh;
     margin-left: 80vw;
     height: 0;
     z-index: 200;
