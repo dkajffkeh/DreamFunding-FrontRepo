@@ -92,7 +92,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: "Jua", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     box-sizing: border-box;
 }
 a {
@@ -433,4 +433,30 @@ option {
 
 .snsInput i {
     margin-right: 10px;
+}
+#modal_table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--white-color);
+    color: black;
+    box-shadow: 0 5px 12px rgba(32, 32, 32, 3);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#modal_table th {
+    background-color: var(--beige--color);
+    color: white;
+}
+
+#modal_table td {
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+#modal_table > tbody > tr:hover {
+    background-color: var(--lightbeige--color);
+    color: var(--wine--color);
 }
