@@ -11,11 +11,21 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../../resources/css/common.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- 부트스트랩 css cdn을 추가하면 메뉴바가 깨집니다.. -->
+    
     <link rel="stylesheet" href="../../../resources/css/index/index.css" />
+    <link rel="stylesheet" href="../../../resources/css/common.css" />
+
+
   </head>
   <body>
     <header>
@@ -34,19 +44,19 @@
 
         <!-- 로그인 전 출력 영역 -->
          
-        <div class="header__right">
-          <div class="search__box">
-            <input type="text" class="search-bar" placeholder="프로젝트 검색" id="search" />
-            <span class="material-icons"> search </span>
+        <!-- <div class="header__right">
+          <div class="search__box"  >
+            <input type="text" class="search-bar" placeholder="프로젝트 검색" id="search" onclick=showHideSearch(); />
+            <span class="material-icons"> search </span> -->
         
             <!-- 검색창 클릭 시 나올 창 -->
              
-            <div class="search-slide">
+            <!-- <div class="search-slide" id="showHideSearch" >
               <div class="search-category">
                 <button class="search-cate-btn">최근</button>
                 <button class="search-cate-btn">카테고리</button>
               </div>
-              <div class="search-text">
+              <div class="search-text"> -->
                 
                 <!-- 카테고리 -->
                 <!-- <div>
@@ -62,7 +72,7 @@
 
                 <!-- 최근검색어 -->
                  
-                <div class="search-text-content">
+                <!-- <div class="search-text-content">
                   <ul>
                     <li>
                       강아지
@@ -78,7 +88,7 @@
                   <button class="search-bot-btn-delete">전체 삭제</button>
                 </div>
                 <div>
-                  <button class="search-bot-btn-close">닫기</button>
+                  <button class="search-bot-btn-close" onclick= searchClose();>닫기</button>
                 </div>
               </div>
             </div>
@@ -86,38 +96,53 @@
           <a href="#" class="sign__group">로그인</a>
           <a href="#" class="sign__group">회원가입</a>
         </div>
+
+        <script>
+          
+          function showHideSearch(){
+              if(document.getElementById("showHideSearch").style.display =='none'){
+                  document.getElementById("showHideSearch").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHideSearch").style.display ='none';
+              }
+          }
+          function searchClose(){
+              if(document.getElementById("showHideSearch").style.display =='none'){
+                  document.getElementById("showHideSearch").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHideSearch").style.display ='none';
+              }
+          }
+        </script> -->
          
 
         <!-- 로그인 시 출력 영역 -->
-        <!-- <div class="header__right">
+        <div class="header__right">
           <div class="search__box">
             <input type="text" class="search-bar" placeholder="프로젝트 검색" />
             <span class="material-icons"> search </span>
           </div>
 
-          <i class="header__icon"><span class="material-icons"  onclick=showHideAlarm();> notifications </span></i>
-          <div class="showHideAlarm" id="showHideAlarm" style="border: 1px solid red; position: relative; z-index: 200;">
-            <div>
-              <div>알림울립니당</div>
-            </div>
-          </div>
+          <i class="header__icon"><span class="material-icons"> notifications </span></i>
+          <button type="button" class="alarm-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+            sagittis lacus vel augue laoreet rutrum faucibus.">
+            <i class="header__icon"><span class="material-icons"> notifications </span></i>
+          </button>
+            
+          
           <i class="header__icon"><span class="material-icons"> account_circle </span></i>
-        </div> -->
+        </div>
 
         
+            <script>
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+            </script>
 
-        <!-- 알림창 스크립트 -->
-        <script>
-          
-          function showHideAlarm(){
-              if(document.getElementById("showHideAlarm").style.display =='none'){
-                  document.getElementById("showHideAlarm").style.display ='block';
-              }
-              else{
-                  document.getElementById("showHideAlarm").style.display ='none';
-              }
-          }
-      </script>
+        
         
 
       </div>
@@ -188,7 +213,7 @@
                   document.getElementById("showHide").style.display ='none';
               }
           }
-      </script>
+        </script>
 
         <div class="inner">
 
@@ -334,7 +359,7 @@
 
             <!-- 더보기 버튼 -->
             <div class="more more-a">
-              <button type="button" class="btn">진행중인 펀딩 더보기</button>
+              <button type="button" class="more-btn">진행중인 펀딩 더보기</button>
             </div>
 
             <!-- 제목 : 실시간 랭킹 -->
@@ -440,7 +465,7 @@
 
             <!-- 더보기 버튼 -->
             <div class="more more-b">
-              <button type="button" class="btn">실시간 랭킹 더보기</button>
+              <button type="button" class="more-btn">실시간 랭킹 더보기</button>
             </div>
 
             <!-- 제목 : 종료된 펀딩 -->
@@ -538,7 +563,7 @@
 
             <!-- 더보기 버튼 -->
             <div class="more more-c">
-              <button type="button" class="btn">종료된 펀딩 더보기</button>
+              <button type="button" class="more-btn">종료된 펀딩 더보기</button>
             </div>
 
             <!-- 문의하기쪽 아랫부분 공간 -->
@@ -546,6 +571,18 @@
               <!-- 여기에 문의하기 그거 들어가야되는디,,,문의하기는 페이지 위에 보여져야되는디,,,, 생각점,,, -->
               <br><br><br><br> 
             </div>
+
+
+            <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+            sagittis lacus vel augue laoreet rutrum faucibus.">
+              Popover on bottom
+            </button>
+            
+            <script>
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+            </script>
 
           </div>
 
