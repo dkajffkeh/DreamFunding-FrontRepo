@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="resource/css/login.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                
+                <h5 class="card-title text-center">금방끝나는 회원가입.</h5>
+                <hr class="my-4">
+                <form class="form-signin">
+                  
+                  <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> 구글로 회원가입</button>
+                  <button class="btn btn-lg btn-naver btn-block text-uppercase" type="submit"><i class="fab fa-naver mr-2"></i>네이버로 회원가입</button>
+                  <hr class="my-4">
+                  <button class="btn btn-lg btn-login btn-block text-uppercase" type="submit"><i class="fab fa-naver mr-2"></i>이메일로 회원가입</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        $(document).on("click", "#allCheck", function(e) {
+            // 만약 전체 체크박스가 체크가 되면
+            if ($(this).is(":checked")) {
+                // 모든 체크박스를 체크
+                $(":checkbox.check").prop("checked", true);
+            } else {
+                // 아니면 모든 체크박스를 해제
+                $(":checkbox.check").removeAttr("checked");
+            }
+        });
+    
+        $(document).on("click", ":checkbox.check", function(e) {
+            var length = $(":checkbox.check").length;
+            var checkLen = $(":checkbox.check:checked").length;
+            // 만약 모든 체크박스가 체크된 상태일 때
+            if (length == checkLen) {
+                // 전체동의를 체크해준다
+                $(":checkbox#allCheck").prop("checked", true);
+            } else {
+                // 만약 하나라도 해제가 되었다면? 전체동의 체크 해제
+                $("#allCheck").removeAttr("checked");
+            }
+        });
+        </script>
+</body>
+</html>

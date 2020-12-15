@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <style>
+           
+            .sidenav {
+                height:100%;
+                width: 0;
+                position: fixed;
+                z-index:1;
+                top: 0;
+                left: 0;
+                background-color: rgb(255,247,237);
+                overflow-x: hidden;
+                transition:0.5s ease-in-out;
+                padding-top: 60px;
+            }
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color:#7f0000;
+                display: block;
+                transition: 0.2s ease-in-out;
+            }
+            .sidenav a:hover, .offcanvas a:focus {
+                color: #000;
+            }
+            .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px !important;
+                margin-left: 50px;
+            }
+            .openmenu:hover {
+                color:rgb(0,154,200);
+                transition:0.5s ease-in-out;
+            }
+            .openmenu {
+                font-size: 25px;
+                cursor:pointer;
+                transition:0.5s ease-in-out;
+            }
+            .openmenu > i {
+                font-size: 30px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="mysidenav" class="sidenav">
+            <a href="#" class="closebtn" onclick='closeNav()'>x</a>
+            <a href="#">공지사항</a>
+            <a href="#">자주 묻는 질문</a>
+            <a href="#">1:1문의</a>          
+        </div>       
+        <span class="openmenu" onclick='openNav()'><i class="fa fa-angle-double-left fa-5" aria-hidden="true"></i> open</span>
+    
+        <script>
+            function openNav() {
+                document.getElementById('mysidenav').style.width = '250px';
+            }
+            function closeNav() {
+                document.getElementById('mysidenav').style.width = '0';
+            }
+        </script>
+    </body>
+    </html>
