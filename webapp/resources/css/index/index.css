@@ -229,7 +229,9 @@
     display: grid;
     grid-template-columns: 90% 10%;
     padding: 0.5rem;
+    padding-left: 15px;
     justify-content: center;
+    font-weight: lighter;
 }
 .search-text-btn {
     border: none;
