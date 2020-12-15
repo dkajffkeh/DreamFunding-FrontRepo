@@ -170,8 +170,11 @@
 }
 /* 검색 슬라이드 */
 .search-slide{
-    z-index: 200;
+    position: fixed;
+    z-index: 1000;
     border: 1px solid black;
+    background-color: white;
+    width: 230px;
 }
 .search-cate-btn{
     border: none;
