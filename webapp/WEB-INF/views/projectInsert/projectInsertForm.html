@@ -73,9 +73,9 @@
             <div id="button_wrapper">
                 <button class="btn btn-primary btn1" type="button"><i class="far fa-eye"></i>&nbsp;&nbsp;미리보기</button>
                 <button class="btn btn-primary btn2" type="button"><i class="far fa-save"></i>&nbsp;&nbsp;임시저장</button>
-                <button class="btn btn-primary btn3" type="button"><i
+                <button class="btn btn-primary btn3" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><i
                         class="fas fa-upload"></i>&nbsp;&nbsp;불러오기</button>
-                <button class="btn btn-primary btn4" type="button" disabled><i
+                <button class="btn btn-primary btn4" type="button"><i
                         class="fas fa-handshake"></i>&nbsp;&nbsp;승인요청하기</button>
             </div>
 
@@ -661,6 +661,37 @@
     </div>
     </form>
     </div>
+
+    <!--Modal-->
+    
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" data-toggle="modal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="padding: 10px 5px 5px 10px;">
+          <h1 style="font-size: 2.0rem;">불러오기</h1>
+            <table id="modal_table" style="width:775px; margin-top: 15px;">
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>프로젝트 상태</th>
+                    <th>프로젝트 제목</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12</td>
+                    <td>반려</td>
+                    <td>그건 알아서 뭐하게</td>
+                    <td>2020-12-14</td>
+                </tr> 
+            </tbody>
+            </table>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="width: 80px; position: relative; left:88%; margin-top: 15px;">Close</button>
+        </div>
+      </div>
+    </div>
+
     <script defer src="../../../resources/js/projectInsertForm/completeCheck.js"></script>
     <script defer src="../../../resources/js/projectInsertForm/calculatorLettersDate.js"></script>
     <script defer src="../../../resources/js/projectInsertForm/handleScroll.js"></script>

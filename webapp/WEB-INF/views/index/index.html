@@ -33,18 +33,21 @@
         </div>
 
         <!-- 로그인 전 출력 영역 -->
+        <!--  
         <div class="header__right">
           <div class="search__box">
             <input type="text" class="search-bar" placeholder="프로젝트 검색" id="search" />
             <span class="material-icons"> search </span>
-
+        -->
             <!-- 검색창 클릭 시 나올 창 -->
+            <!--  
             <div class="search-slide">
               <div class="search-category">
                 <button class="search-cate-btn">최근</button>
                 <button class="search-cate-btn">카테고리</button>
               </div>
               <div class="search-text">
+                -->
                 <!-- 카테고리 -->
                 <!-- <div>
                   <ul>
@@ -56,7 +59,9 @@
                     <li>기타</li>
                   </ul>
                 </div> -->
+
                 <!-- 최근검색어 -->
+                <!-- 
                 <div class="search-text-content">
                   <ul>
                     <li>
@@ -81,22 +86,38 @@
           <a href="#" class="sign__group">로그인</a>
           <a href="#" class="sign__group">회원가입</a>
         </div>
+         -->
 
         <!-- 로그인 시 출력 영역 -->
-        <!-- <div class="header__right">
+        <div class="header__right">
           <div class="search__box">
             <input type="text" class="search-bar" placeholder="프로젝트 검색" />
             <span class="material-icons"> search </span>
           </div>
 
-          <i class="header__icon"
-            ><span class="material-icons"> notifications </span></i
-          >
-          <i class="header__icon"
-            ><span class="material-icons"> account_circle </span></i
-          >
-        </div> -->
+          <i class="header__icon"><span class="material-icons"  onclick=showHideAlarm();> notifications </span></i>
+          <div class="showHideAlarm" id="showHideAlarm" style="border: 1px solid red; position: relative; z-index: 200;">
+            <div>
+              <div>알림울립니당</div>
+            </div>
+          </div>
+          <i class="header__icon"><span class="material-icons"> account_circle </span></i>
+        </div>
 
+        
+
+        <!-- 알림창 스크립트 -->
+        <script>
+          
+          function showHideAlarm(){
+              if(document.getElementById("showHideAlarm").style.display =='none'){
+                  document.getElementById("showHideAlarm").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHideAlarm").style.display ='none';
+              }
+          }
+      </script>
         
 
       </div>
@@ -106,9 +127,9 @@
 
       <div class="top"> <!---->
         <!-- 문의하기 버튼(sticky) -->
-        <div class="sticky"> 
+        <div class="sticky" > 
           <!-- 문의하기 폼 -->
-          <div style="border: 1px red;" class="qna-form">
+          <div class="qna-form" id="showHide">
             <div class="qna-title">
               <div class="qna-title-detail">
                 <span>크라우디</span>
@@ -119,7 +140,7 @@
                 <div>10시간 뒤 상담이 운영됩니다.</div>
                 <div>상담시간( 9:00am - 6:00pm )</div>
                 <div class="qna-time-image">
-                  <img src="../../../resources/images/heart2.png" width="50px" height="50px">
+                  <span class="material-icons md-48" id="moon">brightness_2</span>
                 </div>
               </div>
             </div>
@@ -128,7 +149,7 @@
                 <div class="qna-detail">
                   <div class="qna-profile">
                     <div class="qna-profile-image">
-                      <img src="../../../resources/images/smile.png" width="50px" height="50px">
+                      <span class="material-icons md-48" id="face">face</span>
                     </div>
                     <div class="qna-profile-name">드림 펀딩</div>
                     <div class="qna-profile-content">안녕하세요. 드림펀딩입니다. <br>무엇을 도와드릴까요?</div>
@@ -143,18 +164,31 @@
               </div>
               <div class="qna-bottom">
                 <div class="qna-bottom-content">
-                  <img src="../../../resources/images/smile.png" width="20px" height="20px">
-                  실시간 상담 이용중
+                  <span class="material-icons" id="bottom-face">face</span>
+                  <span>실시간 상담 이용중</span>
                 </div>
               </div>
             </div>
           </div>
           <!-- 문의하기 버튼 -->
-          <button class="btnQna">
+          <button class="btnQna" onclick=showHide(); >
             <span class="spanQna">문의하기</span>
-            <img src="../../../resources/images/smile.png" alt="" width="30px" height="30px">
+            <span class="material-icons md-48" id="face">face</span>
           </button>
         </div>
+
+        <!-- 문의하기 스크립트 -->
+        <script>
+          
+          function showHide(){
+              if(document.getElementById("showHide").style.display =='none'){
+                  document.getElementById("showHide").style.display ='block';
+              }
+              else{
+                  document.getElementById("showHide").style.display ='none';
+              }
+          }
+      </script>
 
         <div class="inner">
 
@@ -162,19 +196,21 @@
           <div style="overflow: hidden;">
             <div class="main-image">
               <div class="inner-image">
-                <button class="btn1"></button>
+                <div class="btn1">
+                  <span class="material-icons md-48">navigate_before</span>
+                </div>
                 <img src="../../../resources/images/book7.jpg" alt="메인이미지" width="1200px" height="400px">
-                <button class="btn2"></button>
+                <div class="btn2"><span class="material-icons md-48">navigate_next</span></div>
               </div>
               <div class="inner-image">
-                <button class="btn1"></button>
+                <div class="btn1"><span class="material-icons md-48">navigate_before</span></div>
                 <img src="../../../resources/images/book5.jpg" alt="메인이미지" width="1200px" height="400px">
-                <button class="btn2"></button>
+                <div class="btn2"><span class="material-icons md-48">navigate_next</span></div>
               </div>
               <div class="inner-image">
-                <button class="btn1"></button>
+                <div class="btn1"><span class="material-icons md-48">navigate_before</span></div>
                 <img src="../../../resources/images/book14.jpg" alt="메인이미지" width="1200px" height="400px">
-                <button class="btn2"></button>
+                <div class="btn2"><span class="material-icons md-48">navigate_next</span></div>
               </div>
             </div>
           </div>
@@ -216,7 +252,9 @@
                   <div class="card-image" style="background-image: url(../../../resources/images/book12.jpg)">
                     <img src="../../../resources/images/book12.jpg" alt="책">
                     <div>
-                      <button style="background-image: url(../../../resources/images/heart2.png)" class="like"></button>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
                     </div>
                   </div>
                   <div class="card-desc">
@@ -234,7 +272,9 @@
                   <figure class="card-image" style="background-image: url(../../../resources/images/book1.jpg)">
                     <img src="../../../resources/images/book1.jpg" alt="책">
                     <div>
-                      <button style="background-image: url(../../../resources/images/heart1.png)" class="like"></button>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
                     </div>
                   </figure>
                   <div class="card-desc">
@@ -251,6 +291,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book2.jpg)">
                     <img src="../../../resources/images/book2.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -266,6 +311,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book9.jpg)">
                     <img src="../../../resources/images/book9.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -308,6 +358,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book12.jpg)">
                     <img src="../../../resources/images/book12.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -323,6 +378,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book1.jpg)">
                     <img src="../../../resources/images/book1.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -338,6 +398,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book2.jpg)">
                     <img src="../../../resources/images/book2.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -353,6 +418,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book9.jpg)">
                     <img src="../../../resources/images/book9.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -385,6 +455,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book12.jpg)">
                     <img src="../../../resources/images/book12.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -400,6 +475,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book1.jpg)">
                     <img src="../../../resources/images/book1.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -415,6 +495,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book2.jpg)">
                     <img src="../../../resources/images/book2.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
@@ -430,6 +515,11 @@
                 <li class="card-item">
                   <figure class="card-image" style="background-image: url(../../../resources/images/book9.jpg)">
                     <img src="../../../resources/images/book9.jpg" alt="책">
+                    <div>
+                      <div class="like">
+                        <span class="material-icons md-36">favorite</span>
+                      </div>
+                    </div>
                   </figure>
                   <div class="card-desc">
                       <div class="project-content">
