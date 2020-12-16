@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../../resources/css/common.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../resources/css/mypage/mypageindex.css"
+    />
+    <link rel="stylesheet" href="../../../resources/css/detail/message.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="header__left">
+          <a class="logo" href="">
+            <img
+              src="C:/DreamFunding-FrontRepo/webapp/resources/images/mainlogo.png"
+              alt=""
+            />
+          </a>
+          <ul class="header__nav">
+            <li><a href="#">펀딩하기</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+          <button class="btn btn--main"><a href="#">프로젝트 만들기</a></button>
+        </div>
+
+        <!-- 로그인 전 출력 영역 -->
+        <div class="header__right">
+          <div class="search__box">
+            <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+            <span class="material-icons"> search </span>
+          </div>
+          <a href="#" class="sign__group">로그인</a>
+          <a href="#" class="sign__group">회원가입</a>
+        </div>
+
+        <!-- 로그인 시 출력 영역 -->
+        <!-- <div class="header__right">
+          <div class="search__box">
+            <input type="text" class="search-bar" placeholder="프로젝트 검색" />
+            <span class="material-icons"> search </span>
+          </div>
+
+          <i class="header__icon"
+            ><span class="material-icons"> notifications </span></i
+          >
+          <i class="header__icon"
+            ><span class="material-icons"> account_circle </span></i
+          >
+        </div> -->
+      </div>
+    </header>
+
+    <br />
+    <div class="wrap1">
+      <!--설정아이콘-->
+      <a href=""><span class="material-icons" id="setting">settings</span></a>
+      <!-- 마이페이지 프로필 div-->
+      <div class="page-name">
+        <h style="font-weight: bold">마이페이지</h><br />
+        <a href=""
+          ><img
+            src="C:/DreamFunding-FrontRepo/webapp/resources/images/book5.jpg"
+            class="profile-img"
+            width="80px;"
+            height="80px;"
+            style="border-radius: 70px"
+        /></a>
+      </div>
+    </div>
+
+    <!-- 이곳에 페이지 내용 작성 -->
+    <main class="section">
+      <div class="inner">
+        <!--  페이지 내용 작성하는곳 -->
+        <div class="wrap2">
+          <!--서포터, 크리에이터 탭-->
+          <div class="container mt-3" style="border: 1px solid red">
+            <br />
+
+            <ul class="nav nav-tabs nav-justified">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#menu1"
+                  ><h3 style="font-weight: bold">서포터</h3></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2"
+                  ><h3 style="font-weight: bold">크리에이터</h3></a
+                >
+              </li>
+            </ul>
+
+            <!-- 세부메뉴 -->
+            <div class="tab-content">
+              <div id="menu1" class="container tab-pane active">
+                <br /><br />
+                <ul class="detail-menu">
+                  <li class="menu--item__one">
+                    <a class="link">펀딩한 프로젝트</a>
+                  </li>
+                  <li class="menu--item__two">
+                    <a class="link1">관심있는 프로젝트</a>
+                  </li>
+                  <li class="menu--item__three">
+                    <a class="link2">메시지</a>
+                  </li>
+                  <li class="bottom__line"></li>
+                  <hr class="hrs" />
+                </ul>
+              </div>
+
+              <div id="menu2" class="container tab-pane fade">
+                <br /><br />
+                <ul class="detail-menu">
+                  <li class="menu--item__one">
+                    <a class="link">프로젝트 만들기</a>
+                  </li>
+                  <li class="menu--item__two">
+                    <a class="link1">제작한 프로젝트</a>
+                  </li>
+                  <li class="menu--item__three">
+                    <a class="link2">메시지</a>
+                  </li>
+                  <li class="bottom__line"></li>
+                  <hr class="hrs" />
+                </ul>
+              </div>
+
+              <ul class="message__container">
+                <!-- 아이템1 -->
+                <li class="card">
+                  <div class="card__image-container">
+                    <img
+                      class="card__image"
+                      src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2126&q=80"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="card__content">
+                    <h3 class="card__title">프로젝트 제목 프로젝트 제목</h3>
+                    <p>last message</p>
+                    <span class="card__last-comment"
+                      >안녕하세요 크리에이터님, 혹시 얼리버드로 마감된 리워드
+                      수량은 추가 예정 없나요?</span
+                    >
+                  </div>
+
+                  <div class="card__cover">
+                    <button>ENTER</button>
+                  </div>
+                </li>
+
+                <!-- 아이템2 -->
+                <li class="card">
+                  <div class="card__image-container">
+                    <img
+                      class="card__image"
+                      src="../../../resources/images/dream.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="card__content">
+                    <h3 class="card__title">프로젝트 제목</h3>
+                    <p>last message</p>
+                    <span class="card__last-comment"
+                      >더 좋은 프로젝트로 찾아뵙겠습니다 :) 더 좋은 프로젝트로
+                      찾아뵙겠습니다 :)더 좋은 프로젝트로 찾아뵙겠습니다
+                      :)</span
+                    >
+                  </div>
+                  <div class="card__cover">
+                    <button>ENTER</button>
+                  </div>
+                </li>
+
+                <!-- 아이템3 -->
+                <li class="card">
+                  <div class="card__image-container">
+                    <img
+                      class="card__image"
+                      src="../../../resources/images/book14.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="card__content">
+                    <h3 class="card__title">프로젝트 제목</h3>
+                    <p>last message</p>
+                    <span class="card__last-comment"
+                      >더 좋은 프로젝트로 찾아뵙겠습니다 :)</span
+                    >
+                  </div>
+                  <div class="card__cover">
+                    <button>ENTER</button>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- 채팅방 -->
+              <div class="chat__wrapper">
+                <div class="chat__title__wrapper">
+                  <span>프로젝트 제목</span>
+                  <p id="chat_close" onclick="toggleChat()">닫기</p>
+                </div>
+                <div class="chat-wrapper">
+                  <div class="chat-message padding">
+                    <div class="chat-message chat-message-recipient">
+                      <img
+                        class="chat-image chat-image-default"
+                        src="../../../resources/images/cat.jpg"
+                      />
+
+                      <div class="chat-message-wrapper">
+                        <div class="chat-message-content">
+                          <p>
+                            안녕하세요 크리에이터님, 혹시 얼리버드로 마감된
+                            리워드 수량은 추가 예정 없나요?
+                          </p>
+                        </div>
+                        <div class="chat-details">
+                          <span class="chat-message-read-status font-size-small"
+                            >- 2020.12.11</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="chat-message chat-message-sender">
+                      <img
+                        class="chat-image chat-image-default"
+                        src="../../../resources/images/dream.jpg"
+                      />
+
+                      <div class="chat-message-wrapper">
+                        <div class="chat-message-content">
+                          <p>
+                            서포터님 안녕하세요? 드림리뷰오브북스입니다.
+                            안타깝게도 현재 마감된 얼리버드 리워드의 수량 증량
+                            계획은 아직 없습니다. 감사합니다.
+                          </p>
+                        </div>
+
+                        <div class="chat-details">
+                          <span class="chat-message-read-status font-size-small"
+                            >-2020.12.11</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="chat-message chat-message-recipient">
+                      <img
+                        class="chat-image chat-image-default"
+                        src="../../../resources/images/cat.jpg"
+                      />
+
+                      <div class="chat-message-wrapper">
+                        <div class="chat-message-content">
+                          <p>아쉽네요ㅠㅠ 다음 펀딩 기다리겠습니다!</p>
+                        </div>
+
+                        <div class="chat-details">
+                          <span class="chat-message-read-status font-size-small"
+                            >-2020.12.12</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="chat-message chat-message-sender">
+                      <img
+                        class="chat-image chat-image-default"
+                        src="../../../resources/images/dream.jpg"
+                      />
+
+                      <div class="chat-message-wrapper">
+                        <div class="chat-message-content">
+                          <p>더 좋은 프로젝트로 찾아뵙겠습니다 :)</p>
+                        </div>
+                        <div class="chat-details">
+                          <span class="chat-message-read-status font-size-small"
+                            >-2020.12.12</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat__input__wrapper">
+                  <input type="text" />
+                  <span class="material-icons"> send </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__center">
+          <img src="../../../resources/images/logo3.png" alt="" />
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__left">
+            <div class="summary__title">투자위험고지</div>
+            <div class="summary__description">
+              (주)드림펀딩은 중개업(온라인소액투자중개 및 통신판매중개)을
+              영위하는 플랫폼 제공자로 자금을 모집하는 당사자가 아닙니다.<br />
+              따라서 투자손실의 위험을 보전하거나 리워드 제공을 보장해 드리지
+              않으며 이에 대한 법적인 책임을 지지 않습니다.
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="summary__title">고객센터</div>
+            <div class="summary__description">
+              OPEN : AM 10 : 10 ~ PM 05 : 30 ( LUNCH AT 12 : 00 ~ 13 : 00 )<br />
+              대표전화 : 031 - 8039 - 5569<br />
+              주소지 : 경기도 성남시 수정구 대왕판교로 815 기업지원허브 814호<br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggleChat = () => {
+        document
+          .querySelector(".chat__wrapper")
+          .classList.toggle("chat-active");
+      };
+      document.querySelectorAll(".card__cover").forEach((v) => {
+        v.addEventListener("click", toggleChat);
+      });
+
+      // 제목 13글자 초과 시 ... 표시
+      const cardTitle = document.querySelectorAll(".card__title");
+      cardTitle.forEach((v) => {
+        console.log(v.textContent.length);
+        if (v.textContent.length > 13) {
+          const newText = v.innerText.substring(0, 14) + "...";
+
+          // console.log(newText)
+          v.innerText = newText;
+        }
+      });
+
+      // 마지막 메시지 45글자 초과 시 ... 표시
+      const lastComment = document.querySelectorAll(".card__last-comment");
+      lastComment.forEach((v) => {
+        console.log(v.textContent.length);
+        if (v.textContent.length > 45) {
+          const newText = v.innerText.substring(0, 46) + "...";
+
+          // console.log(newText)
+          v.innerText = newText;
+        }
+      });
+
+      // 세부메뉴 스크립트
+      $(document).ready(function () {
+        $(".link").addClass("color");
+        //   첫번째
+        $(".menu--item__one").click(function () {
+          $(".bottom__line").addClass("bottom__active");
+          $(".link").addClass("color");
+          $(".link1").removeClass("color1");
+          $(".link2").removeClass("color2");
+          $(".bottom__line").removeClass("bottom__active1 bottom__active2");
+        });
+
+        //  두번째
+        $(".menu--item__two").click(function () {
+          $(".bottom__line").addClass("bottom__active1");
+          $(".link1").addClass("color1");
+          $(".link").removeClass("color");
+          $(".link2").removeClass("color2");
+          $(".bottom__line").removeClass("bottom__active bottom__active2");
+        });
+
+        // 세번째
+        $(".menu--item__three").click(function () {
+          $(".bottom__line").addClass("bottom__active2");
+          $(".link2").addClass("color2");
+          $(".link").removeClass("color");
+          $(".link1").removeClass("color1");
+          $(".bottom__line").removeClass("bottom__active bottom__active1");
+        });
+      });
+    </script>
+  </body>
+</html>
