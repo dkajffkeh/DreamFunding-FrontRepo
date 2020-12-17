@@ -4,7 +4,6 @@ $(function () {
 
     let today = new Date();
 
-
     let year = today.getFullYear();
     let month = today.getMonth() + 1;
     let date = today.getDate()
@@ -13,8 +12,6 @@ $(function () {
     $(".form-control.date.start").attr('min', `${year}-${month}-${date}`);
 
     let after3days = new Date();
-
-
 
     let after3daysYear = after3days.getFullYear();
     let after3daysMonth = after3days.getMonth() + 1;
