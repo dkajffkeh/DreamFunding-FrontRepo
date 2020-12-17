@@ -131,7 +131,7 @@
               </div>
               <div class="status-btn__wrapper">
                 <button type="button" class="btn btn--main">
-                  <a href="#">프로젝트 밀어주기</a>
+                  <a href="#rewardLabel">프로젝트 밀어주기</a>
                 </button>
                 <div class="btn-icon__wrapper">
                   <button type="button" class="btn btn--icon">
@@ -188,13 +188,13 @@
                 드림리뷰오브북스는 각 분야를 전공한 <br />
                 학생들이 모여 만드는 서평 잡지 프로젝트 팀입니다.
               </div>
-              <div class="btn pressDownButton">
+              <div class="btn pressDownButton" onClick="deleteModalOpen()">
                 <span class="material-icons"> email </span>크리에이터에게 메시지
                 보내기
               </div>
             </div>
 
-            <div class="reward-label">리워드 선택</div>
+            <div class="reward-label" id="rewardLabel">리워드 선택</div>
             <div class="reward__wrapper">
               <div class="reward-box">
                 <a href="#">
@@ -262,5 +262,43 @@
         </div>
       </div>
     </footer>
+
+    <div id="delete-modal" class="modal__layout">
+      <div id="delete-modal-box" class="modal__box">
+        <h1>삭제</h1>
+        <span>제목</span>
+        <input type="text" />
+        <textarea name="" id=""></textarea>
+        <span>정말로 삭제하시겠습니까?</span>
+        <div class="modal__btn__wrapper">
+          <button>OK</button>
+          <button onClick="deleteModalClose()">CANCEL</button>
+        </div>
+      </div>
+    </div>
+
+    <script defer>
+      const deleteModalOpen = () => {
+        document
+          .querySelector("#delete-modal")
+          .classList.toggle("modal__active");
+      };
+      const deleteModalClose = () => {
+        document.querySelector("#delete-modal").style.animation =
+          "fadeOut 0.4s ease-in-out forwards";
+        document.querySelector("#delete-modal-box").style.animation =
+          "slideDown 0.4s ease-in-out forwards";
+
+        setTimeout(() => {
+          document
+            .querySelector("#delete-modal")
+            .classList.toggle("modal__active");
+          document.querySelector("#delete-modal").style.animation =
+            "fadeIn 0.4s ease-in-out forwards";
+          document.querySelector("#delete-modal-box").style.animation =
+            "slideUp 0.4s ease-in-out forwards";
+        }, 400);
+      };
+    </script>
   </body>
 </html>
